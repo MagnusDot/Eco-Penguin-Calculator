@@ -1,0 +1,27 @@
+{
+  "name": "Eco Pinguin Death Calculator",
+  "description": "Calculate the Pinguin Death",
+  "version": "0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*",
+        "file://*/*"
+      ],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "./Pages/popup.html"
+  },
+  "options_page": "./Pages/options.html",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ]
+}
