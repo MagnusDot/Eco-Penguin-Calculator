@@ -16,7 +16,7 @@
     }
   ],
   "action": {
-    "default_popup": "./dist/index.html"
+    "default_popup": "./Pages/popup.html"
   },
   "options_page": "./Pages/options.html",
   "permissions": [

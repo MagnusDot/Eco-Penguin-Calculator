@@ -3,7 +3,6 @@ function log_sizes(perfEntry) {
 }
 
 function check_PerformanceEntries() {
-    // Use getEntriesByType() to just get the "resource" events
     let p = performance.getEntriesByType("resource");
     let total = 0
     for (let i = 0; i < p.length; i++) {
@@ -21,19 +20,20 @@ function sendData() {
     setInterval(function () {
         let data = check_PerformanceEntries();
         if (final === 0) {
-            console.log('whouloulou')
             final = data;
             chrome.runtime.sendMessage({
                 type: "UpdateData", options: {
                     size: data,
                 }
             });
+        }else {
+            chrome.runtime.sendMessage({
+                type: "UpdateData", options: {
+                    size: (data - final),
+                }
+            });
         }
-        chrome.runtime.sendMessage({
-            type: "UpdateData", options: {
-                size: (data - final),
-            }
-        });
+
 
         final = data;
 
