@@ -6,7 +6,6 @@ Eco-Pinguin-Calculator
 
 Calculate bits loaded
 
-
 - needed :
 
 Interface of statistics
