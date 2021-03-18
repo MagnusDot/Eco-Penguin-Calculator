@@ -1,6 +1,7 @@
 # Eco-Pinguin-Calculator
 
 We aim to show people that the consumption of data on the internet is not at all trivial! Eco Pinguin Calculator shows you that every action you take on the internet has real consequences in our world
+The real idea behind this project is to playfully raise awareness, I found that the idea of ​​greenspector was good but not "fun and funny" enough for it to be shared across the internet!
 
 ## Features
 
