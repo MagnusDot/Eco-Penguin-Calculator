@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
+    <meta charset="utf-8">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
-    <script src="scripts/index.js"></script>
-</head>
-<body style="width: 400px">
+    <script src="./vendor/chartjs/Chart.min.js"></script>
+    <link rel="stylesheet" href="./vendor/chartjs/Chart.css">
 
+</head>
+
+<body style="width: 400px">
 <header class="text-gray-100 bg-gray-900 body-font shadow w-full">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
@@ -17,51 +21,129 @@
             <span class="ml-3 text-xl">Eco.pingouin</span>
         </a>
         <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-            <a href="https://www.buymeacoffee.com/magnuscode" target="_blank" class="bg-indigo-700 hover:bg-indigo-500 text-white ml-4 py-2 px-3 rounded-lg">
+            <a href="https://www.buymeacoffee.com/magnuscode" target="_blank"
+               class="bg-indigo-700 hover:bg-indigo-500 text-white ml-4 py-2 px-3 rounded-lg">
                 Donate
             </a>
         </div>
     </div>
 </header>
 
+
 <div id="wrapper" class="max-w-xl px-4 py-4 mx-auto">
-    <div class="sm:grid sm:h-32 sm:grid-flow-row sm:gap-4 sm:grid-cols-3">
-        <div id="jh-stats-positive" class="flex flex-col justify-center px-4 py-4 bg-white border border-gray-300 rounded">
-            <div>
-                <div>
-                    <p class="flex items-center justify-end text-green-500 text-md">
-                        <span class="font-bold">6%</span>
-                    </p>
-                </div>
-                <p class="text-3xl font-semibold text-center text-gray-800" ><span id="co2">.258</span><span class="text-xl" id="co2dec" style="font-size: smaller; color: #4a4a4a" >.258</span></p>
-                <p class="text-lg text-center text-gray-500">CO2 Consumed</p>
+    <button id="startButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            translate="start"></button>
+    <button id="stopButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            translate="stop"></button>
+    <button id="resetButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            translate="reset"></button>
+
+
+    <div class="sm:grid sm:h-32 sm:grid-flow-row sm:gap-4 sm:grid-cols-3 hidden" id="stats">
+
+        <div id="jh-stats-positive"
+             class="flex flex-col justify-center px-4 py-4 bg-white border border-gray-300 rounded sm:mt-0">
+            <div class="content-center">
+                <p class="text-lg text-center text-gray-500">Principal Websites</p>
+
+                <p class="text-3xl font-semibold text-center text-gray-800">
+                    <canvas id="myChart" width="10px"></canvas>
+                </p>
             </div>
         </div>
 
-        <div id="jh-stats-negative" class="flex flex-col justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0">
-            <div>
+
+        <div class=" grid-cols-6 auto-cols-max content-center gap-4 ml-6">
+            <div class="col-start-1 col-end-4 justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0 ">
                 <div>
-                    <p class="flex items-center justify-end text-red-500 text-md">
-                        <span class="font-bold">6%</span>
-                    </p>
+                    <div class="inline-block">
+                        <select id="selectRegion"
+                                class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="" translate="selectRegionPlaceholder"></option>
+                            <option value="regionEuropeanUnion" translate="regionEuropeanUnion"></option>
+                            <option value="regionFrance" translate="regionFrance"></option>
+                            <option value="regionUnitedStates" translate="regionUnitedStates"></option>
+                            <option value="regionChina" translate="regionChina"></option>
+                            <option value="regionOther" translate="regionOther"></option>
+                        </select>
+                    </div>
+
+                    <div class="inline-block">
+                        <select id="AnimalChoose"
+                                class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="" translate="ChooseAnimal"></option>
+                            <option value="Penguin" translate="Penguin"></option>
+                        </select>
+                    </div>
+
+
                 </div>
-                <p class="text-3xl font-semibold text-center text-gray-800"><span id="kwh">.258</span><span class="text-xl" id="kwhdec" style="font-size: smaller; color: #4a4a4a" >.258</span></p>
-                <p class="text-lg text-center text-gray-500">Consumed</p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="grid grid-cols-6 auto-cols-max content-center gap-4 ml-6">
+            <div class="col-start-1 col-end-4 justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0 ">
+                <div>
+                    <p class="text-3xl font-semibold text-center text-gray-800"><span id="duration"></span></p>
+                    <p class="text-lg text-center text-gray-500">Time Passed</p>
+                </div>
+            </div>
+            <div class="col-start-4 col-end-8 justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0">
+                <div>
+                    <p class="text-3xl font-semibold text-center text-gray-800"><span id="mbTotalValue"></span></p>
+                    <p class="text-lg text-center text-gray-500">MB Total Value</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-flow-col auto-cols-max content-center gap-4 ml-6">
+            <div class="col-start-1 col-end-4 justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0 ">
+                <div>
+                    <p class="text-3xl font-semibold text-center text-gray-800"><span id="pingoo"></span></p>
+                    <p class="text-lg text-center text-gray-500">Pingouin Died</p>
+                </div>
+            </div>
+            <div class="col-start-4 col-end-8 justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0">
+                <div>
+                    <p class="text-3xl font-semibold text-center text-gray-800"><span id="kWhTotalValue"></span></p>
+                    <p class="text-lg text-center text-gray-500">KWH Consumed</p>
+                </div>
             </div>
         </div>
 
-        <div id="jh-stats-neutral" class="flex flex-col justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0">
-            <div>
+
+        <div class="grid grid-flow-col auto-cols-max content-center gap-4 ml-6">
+            <div class="col-start-1 col-end-4 justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0 ">
                 <div>
-                    <p class="flex items-center justify-end text-gray-500 text-md">
-                        <span class="font-bold">0%</span>
-                    </p>
+                    <p class="text-3xl font-semibold text-center text-gray-800"><span id="gCO2Value"></span></p>
+                    <p class="text-lg text-center text-gray-500">g/CO2 consumed</p>
                 </div>
-                <p class="text-3xl font-semibold text-center text-gray-800"><span id="pingoo">.258</span><span class="text-xl" id="pingoodec" style="font-size: 20px; color: #4a4a4a" >.258</span></p>
-                <p class="text-lg text-center text-gray-500">Pingouin DIED</p>
+            </div>
+            <div class="col-start-4 col-end-8 justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0">
+                <div>
+                    <p class="text-3xl font-semibold text-center text-gray-800"><span id="kmByCarValue"></span></p>
+                    <p class="text-lg text-center text-gray-500">km by car</p>
+                </div>
             </div>
         </div>
+
+        <div class="flex flex-col justify-center px-4 py-4 mt-4 bg-white border border-gray-300 rounded sm:mt-0">
+            <div>
+                <span id="statsListTitle" translate="topTraffic"></span>
+                <ul id="statsListItems"></ul>
+            </div>
+        </div>
+
+
     </div>
 </div>
+
+
+<script src="popup.js"></script>
 </body>
 </html>

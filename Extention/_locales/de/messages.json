@@ -1,0 +1,105 @@
+{
+   "analysisInProgress": {
+      "description": "Analyse läuft Nachricht",
+      "message": "Analyse läuft. Surfe im Web und komm dann wieder um deine Statistiken zu sehen!"
+   },
+   "chargedSmartphonesUnit": {
+      "message": "geladene Handys"
+   },
+   "digitalEquivalenceTitle": {
+      "message": "Die CO2-Emissionen deines Browsens entsprechen:"
+   },
+   "equivalenceTitle": {
+      "description": "Äquivalenz",
+      "message": "In $MINUTES$ Minuten hast du $MBTOTAL$ MB heruntergeladen. Das hat $KWH$ kWh oder $GCO2$ gCO2e gebraucht",
+      "placeholders": {
+         "gco2": {
+            "content": "$4",
+            "example": "199"
+         },
+         "kwh": {
+            "content": "$3",
+            "example": "99"
+         },
+         "mbtotal": {
+            "content": "$2",
+            "example": "10"
+         },
+         "minutes": {
+            "content": "$1",
+            "example": "60"
+         }
+      }
+   },
+   "howToChange": {
+      "message": "Was kann ich ändern? Verantwortungsbewusstsein? [EN]"
+   },
+   "howToChangeUrl": {
+      "message": "https://theshiftproject.org/en/article/unsustainable-use-online-video/"
+   },
+   "kmByCarUnit": {
+      "message": "km mit dem Auto"
+   },
+   "legalNotice": {
+      "description": "Impressum und Lizenz link titel",
+      "message": "Impressum/Lizenz"
+   },
+   "legalNoticeUrl": {
+      "description": "Lizenz url",
+      "message": "https://theshiftproject.org/en/general-conditions-of-use/"
+   },
+   "mbTotalUnit": {
+      "message": "MB"
+   },
+   "moreInformation": {
+      "description": "Über link titel",
+      "message": "Über"
+   },
+   "moreInformationUrl": {
+      "description": "Über url",
+      "message": "https://theshiftproject.org/en/carbonalyser-browser-extension/"
+   },
+   "regionChina": {
+      "message": "China"
+   },
+   "regionEuropeanUnion": {
+      "message": "Europäische Union"
+   },
+   "regionFrance": {
+      "message": "Frankreich"
+   },
+   "regionOther": {
+      "message": "Andere"
+   },
+   "regionUnitedStates": {
+      "message": "USA"
+   },
+   "reset": {
+      "description": "Zurücksetzen Knopf",
+      "message": "Zurücksetzen"
+   },
+   "resetConfirmation": {
+      "message": "Zurücksetzen bestätigen?"
+   },
+   "selectRegionHelp": {
+      "message": "Die Länderauswahl ist nicht zwingend erforderlich, lässt uns aber deine Ergebnisse besser anpassen."
+   },
+   "selectRegionPlaceholder": {
+      "message": "Wähle dein Land aus"
+   },
+   "start": {
+      "description": "Analyse starten Knopf",
+      "message": "Analyse starten"
+   },
+   "statsOthers": {
+      "message": "Andere"
+   },
+   "stop": {
+      "description": "Analyse stoppen Knopf",
+      "message": "Analyse stoppen"
+   },
+   "topTraffic": {
+      "description": "Top 5 Datenverbraucher liste titel",
+      "message": "Top 5 Datenverbraucher"
+   }
+}

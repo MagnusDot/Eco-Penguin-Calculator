@@ -2,26 +2,18 @@
   "name": "Eco Pinguin Death Calculator",
   "description": "Calculate the Pinguin Death",
   "version": "0.1",
-  "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*/*",
-        "file://*/*"
-      ],
-      "js": ["contentScript.js"]
-    }
-  ],
-  "action": {
-    "default_popup": "./Pages/popup.html"
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "48": "icons/pingoo-on.png"
+    },
+    "default_popup": "Pages/popup.html"
   },
+  "manifest_version": 2,
+  "default_locale": "en",
   "options_page": "./Pages/options.html",
-  "permissions": [
-    "storage",
-    "activeTab",
-    "scripting"
-  ]
+  "permissions": ["storage", "webRequest", "\u003Call_urls>"]
 }

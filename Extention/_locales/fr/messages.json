@@ -1,0 +1,111 @@
+{
+   "analysisInProgress": {
+      "description": "Message analyse en cours",
+      "message": "Analyse en cours. Naviguez sur le web puis revenez ici pour les résultats."
+   },
+   "chargedSmartphonesUnit": {
+      "message": "smartphones rechargés"
+   },
+   "digitalEquivalenceTitle": {
+      "message": "Les émissions de CO2 liées à votre utilisation d'internet équivaut à :"
+   },
+   "equivalenceTitle": {
+      "description": "Equivalence",
+      "message": "En $MINUTES$ minutes de navigation, vous avez fait transiter $MBTOTAL$ Mo de données. Cela a nécessité $KWH$ kWh d'électricité, soit $GCO2$ gCO2e",
+      "placeholders": {
+         "gco2": {
+            "content": "$4",
+            "example": "199"
+         },
+         "kwh": {
+            "content": "$3",
+            "example": "99"
+         },
+         "mbtotal": {
+            "content": "$2",
+            "example": "10"
+         },
+         "minutes": {
+            "content": "$1",
+            "example": "60"
+         }
+      }
+   },
+   "howToChange": {
+      "message": "Comment changer cela ? Quelle responsabilité ?"
+   },
+   "howToChangeUrl": {
+      "message": "https://theshiftproject.org/article/climat-insoutenable-usage-video/"
+   },
+   "kmByCarUnit": {
+      "message": "kms en voiture"
+   },
+   "legalNotice": {
+      "description": "Titre du lien mentions légales",
+      "message": "Mentions légales"
+   },
+   "legalNoticeUrl": {
+      "description": "Url des mentions légales",
+      "message": "https://theshiftproject.org/mentions-legales/"
+   },
+   "mbTotalUnit": {
+      "message": "Mo"
+   },
+   "moreInformation": {
+      "description": "Titre du lien plus d'informations",
+      "message": "Informations"
+   },
+   "moreInformationUrl": {
+      "description": "Url plus d'informations",
+      "message": "https://theshiftproject.org/carbonalyser-extension-navigateur/"
+   },
+   "regionChina": {
+      "message": "Chine"
+   },
+   "regionEuropeanUnion": {
+      "message": "Union Européenne"
+   },
+   "regionFrance": {
+      "message": "France"
+   },
+   "regionOther": {
+      "message": "Autre"
+   },
+   "regionUnitedStates": {
+      "message": "Etats-unis"
+   },
+   "reset": {
+      "description": "Bouton Ré-initialiser les données",
+      "message": "Ré-initialiser les données"
+   },
+   "resetConfirmation": {
+      "message": "Confirmer la réinitialisation des statistiques?"
+   },
+   "selectRegionHelp": {
+      "message": "Ce n'est pas obligatoire mais cela rendra le résultat plus pertinent."
+   },
+   "selectRegionPlaceholder": {
+      "message": "Sélectionnez votre zone géographique"
+   },
+   "ChooseAnimal": {
+      "message" : "Sélectionnez votre Animal"
+   },
+   "Penguin": {
+      "message": "Pingouin"
+   },
+   "start": {
+      "description": "Bouton démarrer l'analyse",
+      "message": "Démarrer l'analyse"
+   },
+   "statsOthers": {
+      "message": "Autres"
+   },
+   "stop": {
+      "description": "Bouton stopper l'analyse",
+      "message": "Stopper l'analyse"
+   },
+   "topTraffic": {
+      "description": "Titre de la liste Top trafic",
+      "message": "Top 5 du trafic relatif à votre navigation"
+   }
+}

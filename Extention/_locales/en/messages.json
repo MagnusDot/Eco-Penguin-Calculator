@@ -1,0 +1,111 @@
+{
+   "analysisInProgress": {
+      "description": "Analysis in progress message",
+      "message": "Analysis in progress. Start browsing the web, then come back here to get stats!"
+   },
+   "chargedSmartphonesUnit": {
+      "message": "charged smartphones"
+   },
+   "digitalEquivalenceTitle": {
+      "message": "The CO2 emissions related to your digital use is equivalent to:"
+   },
+   "equivalenceTitle": {
+      "description": "Equivalence",
+      "message": "In $MINUTES$ minutes of browsing, you have downloaded $MBTOTAL$ MB of data. This required $KWH$ kWh of electricity, or $GCO2$ gCO2e",
+      "placeholders": {
+         "gco2": {
+            "content": "$4",
+            "example": "199"
+         },
+         "kwh": {
+            "content": "$3",
+            "example": "99"
+         },
+         "mbtotal": {
+            "content": "$2",
+            "example": "10"
+         },
+         "minutes": {
+            "content": "$1",
+            "example": "60"
+         }
+      }
+   },
+   "howToChange": {
+      "message": "How to change that? What responsibility?"
+   },
+   "howToChangeUrl": {
+      "message": "https://theshiftproject.org/en/article/unsustainable-use-online-video/"
+   },
+   "kmByCarUnit": {
+      "message": "kms by car"
+   },
+   "legalNotice": {
+      "description": "Legal notice link title",
+      "message": "Legal notice"
+   },
+   "legalNoticeUrl": {
+      "description": "Legal notice url",
+      "message": "https://theshiftproject.org/en/general-conditions-of-use/"
+   },
+   "mbTotalUnit": {
+      "message": "Mb"
+   },
+   "moreInformation": {
+      "description": "More information link title",
+      "message": "More information"
+   },
+   "moreInformationUrl": {
+      "description": "More information url",
+      "message": "https://theshiftproject.org/en/carbonalyser-browser-extension/"
+   },
+   "regionChina": {
+      "message": "China"
+   },
+   "regionEuropeanUnion": {
+      "message": "European Union"
+   },
+   "regionFrance": {
+      "message": "France"
+   },
+   "regionOther": {
+      "message": "Other"
+   },
+   "regionUnitedStates": {
+      "message": "United States"
+   },
+   "reset": {
+      "description": "Reset data button",
+      "message": "Reset data"
+   },
+   "resetConfirmation": {
+      "message": "Confirm the statistics reset?"
+   },
+   "selectRegionHelp": {
+      "message": "Not required but the result will be more relevant."
+   },
+   "selectRegionPlaceholder": {
+      "message": "Select your location"
+   },
+   "ChooseAnimal": {
+      "message" : "Choose your Animal"
+   },
+   "Penguin": {
+      "message": "Penguin"
+   },
+   "start": {
+      "description": "Run analysis button",
+      "message": "Run analysis"
+   },
+   "statsOthers": {
+      "message": "Others"
+   },
+   "stop": {
+      "description": "Stop analysis button",
+      "message": "Stop analysis"
+   },
+   "topTraffic": {
+      "description": "Top traffic list title",
+      "message": "Top 5 traffic related to your browsing"
+   }
+}
