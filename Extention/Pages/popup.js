@@ -112,14 +112,20 @@ showStats = () => {
 
     const kWhTotal = Math.round(1000 * (kWhDataCenterTotal + kWhNetworkTotal + kWhDeviceTotal)) / 1000;
     const gCO2Total = Math.round(GESDataCenterTotal + GESNetworkTotal + GESDeviceTotal);
-    const pingoo = gCO2Total / 100;
+    const pingoo = Math.round(gCO2Total/6666);
 
     const kmByCar = Math.round(1000 * gCO2Total / GESgCO2ForOneKmByCar) / 1000;
     const chargedSmartphones = Math.round(gCO2Total / GESgCO2ForOneChargedSmartphone);
 
 
     const megaByteTotal = toMegaByte(stats.total);
-    document.getElementById('duration').textContent = duration.toString();
+
+
+    const hours = (duration / 60);
+    let rhours = Math.floor(hours);
+    let minutes = (hours - rhours) * 60;
+    const rminutes = Math.round(minutes);
+    document.getElementById('duration').textContent = rhours + "h" + rminutes;
     document.getElementById('mbTotalValue').textContent = megaByteTotal;
     document.getElementById('pingoo').textContent = pingoo;
 
