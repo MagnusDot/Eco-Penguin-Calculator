@@ -87,6 +87,12 @@
    "selectRegionPlaceholder": {
       "message": "Wähle dein Land aus"
    },
+   "ChooseAnimal": {
+      "message" : "Wähle dein Tier"
+   },
+   "Penguin": {
+      "message": "Pinguin"
+   },
    "start": {
       "description": "Analyse starten Knopf",
       "message": "Analyse starten"

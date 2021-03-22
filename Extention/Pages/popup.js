@@ -184,14 +184,6 @@ showStats = () => {
             }
         }
     });
-
-
-    /* const equivalenceTitle = document.getElementById('equivalenceTitle');
-    while (equivalenceTitle.firstChild) {
-        equivalenceTitle.removeChild(equivalenceTitle.firstChild);
-    }
-    equivalenceTitle.appendChild(document.createTextNode(chrome.i18n.getMessage('equivalenceTitle', [duration.toString(), megaByteTotal, kWhTotal.toString(), gCO2Total.toString()])));
-*/
 }
 
 start = () => {
@@ -227,11 +219,17 @@ reset = () => {
 
 init = () => {
     const selectedRegion = localStorage.getItem('selectedRegion');
+    const selectedAnimal = localStorage.getItem('selectedAnimal');
 
     if (null !== selectedRegion) {
         userLocation = selectedRegion;
         selectRegion.value = selectedRegion;
     }
+
+    if (null !== selectedAnimal) {
+        selectAnimal.value = selectedAnimal;
+    }
+
 
     if (null === localStorage.getItem('stats')) {
         hide(resetButton);
@@ -260,6 +258,19 @@ selectRegionHandler = (event) => {
     userLocation = selectedRegion;
     showStats();
 }
+
+
+selectAnimalHandler = (event) => {
+    const selectedAnimal = event.target.value;
+
+    if ('' === selectedAnimal) {
+        return;
+    }
+
+    localStorage.setItem('selectedAnimal', selectedAnimal);
+    showStats();
+}
+
 
 translate = (translationKey) => {
     return chrome.i18n.getMessage(translationKey);
@@ -291,6 +302,10 @@ resetButton.addEventListener('click', reset);
 
 const selectRegion = document.getElementById('selectRegion');
 selectRegion.addEventListener('change', selectRegionHandler);
+
+const selectAnimal = document.getElementById('AnimalChoose');
+selectAnimal.addEventListener('change', selectAnimalHandler);
+
 
 document.querySelectorAll('[translate]').forEach(function(element) {
     translateText(element, element.getAttribute('translate'));
