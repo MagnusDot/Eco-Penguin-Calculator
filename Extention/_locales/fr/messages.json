@@ -93,6 +93,9 @@
    "Penguin": {
       "message": "Pingouin"
    },
+   "Greta": {
+      "message": "Greta"
+   },
    "start": {
       "description": "Bouton démarrer l'analyse",
       "message": "Démarrer l'analyse"

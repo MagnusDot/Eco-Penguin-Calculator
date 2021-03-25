@@ -1,7 +1,7 @@
 {
   "name": "Eco Penguin Death Calculator",
   "description": "Calculate the Penguin Death based on yr data consumption",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "background": {
     "scripts": ["background.js"]
   },

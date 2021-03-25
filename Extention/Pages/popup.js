@@ -17,6 +17,8 @@ const carbonIntensityFactorIngCO2PerKWh = {
     'regionOther': defaultCarbonIntensityFactorIngCO2PerKWh
 };
 
+let animalValue = {Penguin : 666, Greta: 777 };
+
 let statsInterval;
 
 parseStats = () => {
@@ -112,7 +114,12 @@ showStats = () => {
 
     const kWhTotal = Math.round(1000 * (kWhDataCenterTotal + kWhNetworkTotal + kWhDeviceTotal)) / 1000;
     const gCO2Total = Math.round(GESDataCenterTotal + GESNetworkTotal + GESDeviceTotal);
-    const pingoo = Math.round(gCO2Total/6666);
+
+    const selectedAnimal = localStorage.getItem('selectedAnimal');
+
+    const pingoo = Math.round(gCO2Total/ animalValue[selectedAnimal]);
+
+    console.log(pingoo, animalValue[selectedAnimal],selectedAnimal)
 
     const kmByCar = Math.round(1000 * gCO2Total / GESgCO2ForOneKmByCar) / 1000;
     const chargedSmartphones = Math.round(gCO2Total / GESgCO2ForOneChargedSmartphone);
@@ -228,6 +235,8 @@ init = () => {
 
     if (null !== selectedAnimal) {
         selectAnimal.value = selectedAnimal;
+        document.getElementById("animal").textContent = selectedAnimal
+
     }
 
 
@@ -268,6 +277,7 @@ selectAnimalHandler = (event) => {
     }
 
     localStorage.setItem('selectedAnimal', selectedAnimal);
+    document.getElementById("animal").textContent = selectedAnimal
     showStats();
 }
 

@@ -93,6 +93,9 @@
    "Penguin": {
       "message": "Pinguin"
    },
+   "Greta": {
+      "message": "Greta"
+   },
    "start": {
       "description": "Analyse starten Knopf",
       "message": "Analyse starten"

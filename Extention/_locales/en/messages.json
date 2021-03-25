@@ -93,6 +93,9 @@
    "Penguin": {
       "message": "Penguin"
    },
+   "Greta": {
+      "message": "Greta"
+   },
    "start": {
       "description": "Run analysis button",
       "message": "Run analysis"
