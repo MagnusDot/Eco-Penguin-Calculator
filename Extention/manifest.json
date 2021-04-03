@@ -15,5 +15,6 @@
   "manifest_version": 2,
   "default_locale": "en",
   "options_page": "./Pages/options.html",
+  "devtools_page": "GreenIT-Analysis.html",
   "permissions": ["storage", "webRequest", "\u003Call_urls>"]
 }
