@@ -191,15 +191,15 @@ showStats = () => {
             }
         }
     });
+
 }
 
 start = () => {
     chrome.runtime.sendMessage({ action: 'start' });
-
+    localStorage.setItem('analysisStarted', '1');
     hide(startButton);
     show(stopButton);
     show(analysisInProgressMessage);
-    localStorage.setItem('analysisStarted', '1');
 }
 
 stop = () => {
@@ -249,7 +249,11 @@ init = () => {
     showStats();
 
     if (null === localStorage.getItem('analysisStarted')) {
+        console.log("1")
+
         return;
+    }else{
+        console.log("test")
     }
 
     start();
@@ -294,6 +298,9 @@ translateHref = (target, translationKey) => {
     target.href = chrome.i18n.getMessage(translationKey);
 }
 
+const startButton = document.getElementById('startButton');
+startButton.addEventListener('click', start);
+
 hide = element => element.classList.add('hidden');
 show = element => element.classList.remove('hidden');
 
@@ -301,8 +308,7 @@ const analysisInProgressMessage = document.getElementById('analysisInProgressMes
 
 const statsElement = document.getElementById('stats');
 
-const startButton = document.getElementById('startButton');
-startButton.addEventListener('click', start);
+
 
 const stopButton = document.getElementById('stopButton');
 stopButton.addEventListener('click', stop);
