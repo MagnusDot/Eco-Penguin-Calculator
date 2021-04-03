@@ -47,13 +47,13 @@ function initUI() {
 
 function loadHTMLBestPractice(ruleId) {
   let html = "";
-  html += "<td>";
+  html += "<td class=\"w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static\">";
   html += "<a href=\"#\" id=\"" + ruleId + "_Detail\" class=\"bestPracticeLink\">";
   html += chrome.i18n.getMessage("rule_" + ruleId);
   html += "</a>";
   html += "</td>";
-  html += "<td style=\"width:30px\"> <img id=\"" + ruleId + "_status\" src=\"icons/OK.png\"></td>";
-  html += "<td> <span id=\"" + ruleId + "_comment\"> </span> <a href=\"#\" id=\"" + ruleId + "_DetailComment\" class=\"detailCommentLink\" hidden>.....</a> </td>";
+  html += "<td class=\"w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static\"> <img id=\"" + ruleId + "_status\" src=\"icons/OK.png\"></td>";
+  html += "<td class=\"w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static\"> <span id=\"" + ruleId + "_comment\"> </span> <a href=\"#\" id=\"" + ruleId + "_DetailComment\" class=\"detailCommentLink\" hidden>.....</a> </td>";
 
   var newTR = document.createElement("tr");
   newTR.innerHTML = html;
@@ -102,7 +102,6 @@ function refreshUI() {
   document.getElementById("domSize").innerHTML = measures.domSize;
   document.getElementById("ecoIndex").innerHTML = measures.ecoIndex;
   document.getElementById("grade").innerHTML = '<span class="grade ' + measures.grade + '">' + measures.grade + '</span>';
-  document.getElementById("waterConsumption").innerHTML = measures.waterConsumption;
   document.getElementById("greenhouseGasesEmission").innerHTML = measures.greenhouseGasesEmission;
   if (analyseBestPractices) {
     document.getElementById("bestPracticesView").hidden = false;

@@ -8,170 +8,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-  <style type="text/css">
-    .grade {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      text-align: center;
-      border-radius: 50%;
-      background-color: #f00;
-      font-size: 18px;
-      line-height: 22px;
-    }
-
-
-    .grade.A {
-      background-color: #349A47;
-      color: #fff;
-    }
-
-    .grade.B {
-      background-color: #51B84B;
-      color: #fff;
-    }
-
-    .grade.C {
-      background-color: #CADB2A
-    }
-
-    .grade.D {
-      background-color: #F6EB15
-    }
-
-    .grade.E {
-      background-color: #FECD06
-    }
-
-    .grade.F {
-      background-color: #F99839;
-      color: #fff;
-    }
-
-    .grade.G {
-      background-color: #ED2124;
-      color: #fff;
-    }
-
-    .bestPracticeDetail {
-      border: 1px solid rgb(8, 226, 73);
-    }
-
-    .bestPracticeDetailComment {
-      border: 1px solid rgb(226, 8, 8);
-    }
-
-    th,
-    td {
-      border: 1px solid white;
-      overflow: hidden;
-      padding : 2.2pt;
-      text-overflow: ellipsis;
-      font-size: 10px;
-      text-align: left;
-    }
-
-    .center-td {
-      text-align: center;
-    }
-
-    table {
-      border-collapse: collapse;
-      table-layout: fixed;
-      width: 95%;
-      margin: auto;
-    }
-
-    .bestPracticeLink {
-      color: black;
-    }
-
-    .detailCommentLink {
-      color: rgb(3, 3, 3);
-      background-color: #F6EB15;
-
-      background-color: rgb(219, 221, 223);
-      font-size: 10px;
-      line-height: 5px;
-    }
-
-    .line {
-    width: 90%;
-    margin: auto;
-    color: rgba(0, 0, 0, 0);
-    line-height: 1px;
-    background-color: rgb(216, 221, 215);
-    margin-top: 1px;
-    margin-bottom: 10px;
-  }
-
-  </style>
-
 </head>
 
 <body>
+
+
+<header class="text-gray-100 bg-gray-900 body-font shadow w-full">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a
+            class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center lg:items-center lg:justify-center mb-4 md:mb-0">
+      <img src="./img/pingoo.png" style="height: 40px; margin-top: 10px; margin-bottom: 10px;"
+           alt="logo">
+
+      <span class="ml-3 text-xl">Eco.pingouin</span>
+    </a>
+    <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+      <a href="https://www.buymeacoffee.com/magnuscode" target="_blank"
+         class="bg-indigo-700 hover:bg-indigo-500 text-white ml-4 py-2 px-3 rounded-lg">
+        Donate
+      </a>
+    </div>
+  </div>
+</header>
+
+
   <div style="text-align:center">
     <div class="container-fluid">
 
 
-      <a href="#" id="launchAnalyse" class="btn btn-primary btn-sm" data-i18n="launchAnalyseButton"></a>
+      <button id="launchAnalyse" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-1"
+              translate="start" data-i18n="launchAnalyseButton"></button>
 
       <br />
 
       <div data-i18n="activateBestPracticeAnalysisCheckbox" style="font-size:10pt;">
-        <input type="checkbox"  id="analyseBestPracticesCheckBox"></input>
+        <input type="checkbox" class="form-checkbox"  id="analyseBestPracticesCheckBox"></input>
       </div>
 
 
     </div>
 
 
-    <div id="ecoIndexView" hidden>
+    <div class="text-2xl" id="ecoIndexView" hidden>
 
-      <H4> EcoIndex <span id="grade"></span>
-      </H4>
+      <h1> EcoIndex <span id="grade"></span></h1>
 
-      <table class="mytable">
-        <tbody>
-          <tr>
-            <th data-i18n="ecoIndex" class="center-td"></th>
-            <th data-i18n="waterConsumption" class="center-td"></th>
-            <th data-i18n="greenhouseGasesEmission" class="center-td"> </th>
-          </tr>
-          <tr>
-            <td id="ecoIndex" class="center-td"></td>
-            <td id="waterConsumption" class="center-td"></td>
-            <td id="greenhouseGasesEmission" class="center-td" ></td>
-          </tr>
+
+
+      <table class="mytable min-w-max w-full table-auto">
+        <thead>
+        <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+          <th class="py-3 px-6 text-left">ecoIndex</th>
+          <th class="py-3 px-6 text-left">CO2 EMISSION (gCO2e)</th>
+        </tr>
+        </thead>
+        <tbody class="text-gray-600 text-sm font-light">
+        <tr class="border-b border-gray-200 hover:bg-gray-100">
+          <td class="py-3 px-6 text-left whitespace-nowrap">
+            <div class="flex items-center">
+              <span id="ecoIndex" class="font-medium"></span>
+            </div>
+          </td>
+          <td class="py-3 px-6 text-left">
+            <div class="flex items-center">
+              <span id="greenhouseGasesEmission" ></span>
+            </div>
+          </td>
+
+        </tr>
         </tbody>
       </table>
-      <div class="line">.</div>
 
-      <table>
-        <tbody>
-          <tr>
-            <th data-i18n="requestNumber" class="center-td"> </th>
-            <th data-i18n="pageSize" class="center-td"> </th>
-            <th data-i18n="domSize" class="center-td"> </th>
-          </tr>
-          <tr>
-            <td id="requestNumber" class="center-td"></td>
-            <td id="responsesSize" class="center-td"></td>
-            <td id="domSize" class="center-td"></td>
-          </tr>
+
+      <table class="mytable min-w-max w-full table-auto">
+        <thead>
+        <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+          <th data-i18n="requestNumber" class="py-3 px-6 text-left"></th>
+          <th data-i18n="pageSize" class="py-3 px-6 text-left"></th>
+          <th data-i18n="domSize" class="py-3 px-6 text-left"></th>
+        </tr>
+        </thead>
+        <tbody class="text-gray-600 text-sm font-light">
+        <tr class="border-b border-gray-200 hover:bg-gray-100">
+          <td class="py-3 px-6 text-left whitespace-nowrap">
+            <div class="flex items-center">
+              <span id="requestNumber" class="font-medium"></span>
+            </div>
+          </td>
+
+          <td class="py-3 px-6 text-left">
+            <div class="flex items-center">
+              <span id="responsesSize" ></span>
+            </div>
+          </td>
+
+          <td class="py-3 px-6 text-left">
+            <div class="flex items-center">
+              <span id="domSize" ></span>
+            </div>
+          </td>
+
+        </tr>
         </tbody>
       </table>
+
       <div class="line"> </div>
     </div>
 
-    <div id="bestPracticesView" hidden>
-      <H4 data-i18n="bestPractices"></H4>
 
-      <table>
+
+
+    <div id="bestPracticesView" hidden>
+      <H4 data-i18n="bestPractices" class="mb-4 font-semibold text-gray-600 dark:text-gray-300"></H4>
+
+      <table class="border-collapse w-full">
         <tbody id="bestPracticesTable">
         </tbody>
       </table>
     </div>
+
+
+
+
   </div>
   <script src="script/externalLibs/require.js"> </script>
   <script src="script/utils.js"> </script>
@@ -204,6 +162,50 @@
   <script src="script/greenpanel.js"> </script>
   <script src="script/ecoIndex.js"> </script>
   <script src="script/i18n.js"> </script>
+
+<style>.grade {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #f00;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+
+.grade.A {
+  background-color: #349A47;
+  color: #fff;
+}
+
+.grade.B {
+  background-color: #51B84B;
+  color: #fff;
+}
+
+.grade.C {
+  background-color: #CADB2A
+}
+
+.grade.D {
+  background-color: #F6EB15
+}
+
+.grade.E {
+  background-color: #FECD06
+}
+
+.grade.F {
+  background-color: #F99839;
+  color: #fff;
+}
+
+.grade.G {
+  background-color: #ED2124;
+  color: #fff;
+}</style>
 </body>
 
 </html>
