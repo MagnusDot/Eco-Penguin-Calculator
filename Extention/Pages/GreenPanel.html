@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title> GreenIT Analysis Panel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<header class="text-gray-100 bg-gray-900 body-font shadow w-full">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a
+            class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center lg:items-center lg:justify-center mb-4 md:mb-0">
+      <img src="./img/pingoo.png" style="height: 40px; margin-top: 10px; margin-bottom: 10px;"
+           alt="logo">
+
+      <span class="ml-3 text-xl">Eco.pingouin</span>
+    </a>
+    <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+      <a href="https://www.buymeacoffee.com/magnuscode" target="_blank"
+         class="bg-indigo-700 hover:bg-indigo-500 text-white ml-4 py-2 px-3 rounded-lg">
+        Donate
+      </a>
+    </div>
+  </div>
+</header>
+
+
+  <div style="text-align:center">
+    <div class="container-fluid">
+
+
+      <button id="launchAnalyse" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-1"
+              translate="start" data-i18n="launchAnalyseButton"></button>
+
+      <br />
+
+      <div data-i18n="activateBestPracticeAnalysisCheckbox" style="font-size:10pt;">
+        <input type="checkbox" class="form-checkbox"  id="analyseBestPracticesCheckBox"></input>
+      </div>
+
+
+    </div>
+
+
+    <div class="text-2xl" id="ecoIndexView" hidden>
+
+      <h1> EcoIndex <span id="grade"></span></h1>
+
+
+
+      <table class="mytable min-w-max w-full table-auto">
+        <thead>
+        <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+          <th class="py-3 px-6 text-left">ecoIndex</th>
+          <th class="py-3 px-6 text-left">CO2 EMISSION (gCO2e)</th>
+        </tr>
+        </thead>
+        <tbody class="text-gray-600 text-sm font-light">
+        <tr class="border-b border-gray-200 hover:bg-gray-100">
+          <td class="py-3 px-6 text-left whitespace-nowrap">
+            <div class="flex items-center">
+              <span id="ecoIndex" class="font-medium"></span>
+            </div>
+          </td>
+          <td class="py-3 px-6 text-left">
+            <div class="flex items-center">
+              <span id="greenhouseGasesEmission" ></span>
+            </div>
+          </td>
+
+        </tr>
+        </tbody>
+      </table>
+
+
+      <table class="mytable min-w-max w-full table-auto">
+        <thead>
+        <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+          <th data-i18n="requestNumber" class="py-3 px-6 text-left"></th>
+          <th data-i18n="pageSize" class="py-3 px-6 text-left"></th>
+          <th data-i18n="domSize" class="py-3 px-6 text-left"></th>
+        </tr>
+        </thead>
+        <tbody class="text-gray-600 text-sm font-light">
+        <tr class="border-b border-gray-200 hover:bg-gray-100">
+          <td class="py-3 px-6 text-left whitespace-nowrap">
+            <div class="flex items-center">
+              <span id="requestNumber" class="font-medium"></span>
+            </div>
+          </td>
+
+          <td class="py-3 px-6 text-left">
+            <div class="flex items-center">
+              <span id="responsesSize" ></span>
+            </div>
+          </td>
+
+          <td class="py-3 px-6 text-left">
+            <div class="flex items-center">
+              <span id="domSize" ></span>
+            </div>
+          </td>
+
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="line"> </div>
+    </div>
+
+
+
+
+    <div id="bestPracticesView" hidden>
+      <H4 data-i18n="bestPractices" class="mb-4 font-semibold text-gray-600 dark:text-gray-300"></H4>
+
+      <table class="border-collapse w-full">
+        <tbody id="bestPracticesTable">
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+  </div>
+  <script src="script/externalLibs/require.js"> </script>
+  <script src="script/utils.js"> </script>
+  <script src="script/rulesManager.js"> </script>
+  <script src="script/rules/AddExpiresOrCacheControlHeaders.js"></script>
+  <script src="script/rules/CompressHttp.js"></script>
+  <script src="script/rules/DomainsNumber.js"></script>
+  <script src="script/rules/DontResizeImageInBrowser.js"></script>
+  <script src="script/rules/EmptySrcTag.js"></script>
+  <script src="script/rules/ExternalizeCss.js"></script>
+  <script src="script/rules/ExternalizeJs.js"></script>
+  <script src="script/rules/HttpError.js"></script>
+  <script src="script/rules/HttpRequests.js"></script>
+  <script src="script/rules/ImageDownloadedNotDisplayed.js"></script>
+  <script src="script/rules/JsValidate.js"></script>
+  <script src="script/rules/MaxCookiesLength.js"></script>
+  <script src="script/rules/MinifiedCss.js"></script>
+  <script src="script/rules/MinifiedJs.js"></script>
+  <script src="script/rules/NoCookieForStaticRessources.js"></script>
+  <script src="script/rules/NoRedirect.js"> </script>
+  <script src="script/rules/OptimizeBitmapImages.js"> </script>
+  <script src="script/rules/OptimizeSvg.js"> </script>
+  <script src="script/rules/Plugins.js"> </script>
+  <script src="script/rules/PrintStyleSheet.js"> </script>
+  <script src="script/rules/SocialNetworkButton.js"></script>
+  <script src="script/rules/StyleSheets.js"> </script>
+  <script src="script/rules/UseETags.js"> </script>
+  <script src="script/rules/UseStandardTypefaces.js"> </script>
+  <script src="script/ui.js"> </script>
+  <script src="script/greenpanel.js"> </script>
+  <script src="script/ecoIndex.js"> </script>
+  <script src="script/i18n.js"> </script>
+
+<style>.grade {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #f00;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+
+.grade.A {
+  background-color: #349A47;
+  color: #fff;
+}
+
+.grade.B {
+  background-color: #51B84B;
+  color: #fff;
+}
+
+.grade.C {
+  background-color: #CADB2A
+}
+
+.grade.D {
+  background-color: #F6EB15
+}
+
+.grade.E {
+  background-color: #FECD06
+}
+
+.grade.F {
+  background-color: #F99839;
+  color: #fff;
+}
+
+.grade.G {
+  background-color: #ED2124;
+  color: #fff;
+}</style>
+</body>
+
+</html>

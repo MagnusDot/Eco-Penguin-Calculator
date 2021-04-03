@@ -110,5 +110,709 @@
    "topTraffic": {
       "description": "Top 5 Datenverbraucher liste titel",
       "message": "Top 5 Datenverbraucher"
+   },
+   "activateBestPracticeAnalysisCheckbox": {
+      "description": "Titel für activateBestPracticeAnalysisCheckbox\n",
+      "message": "\nAktivieren Sie die Analyse bewährter Verfahren"
+   },
+   "bestPractices": {
+      "description": "Title for best practice",
+      "message": "Gute Praktiken"
+   },
+   "csvColumnsLabel": {
+      "description": "csvColumnsLabel",
+      "message": "Datum; URL; Anzahl der Anfragen; Größe (kb); Größe des Dom; GES; Wasser; ecoIndex; Hinweis"
+   },
+   "date": {
+      "description": "Date",
+      "message": "Datiert"
+   },
+   "deleteAllButton": {
+      "description": "Delete All Button",
+      "message": "Alles zurücksetzen\n"
+   },
+   "deleteAllConfirmMessage": {
+      "description": "Delete All Confirm Message",
+      "message": "Möchten Sie den gesamten Verlauf wirklich löschen?"
+   },
+   "deleteButton": {
+      "description": "Delete Button",
+      "message": "Löschen"
+   },
+   "domSize": {
+      "description": "Dom Size",
+      "message": "DOM-Größe\n"
+   },
+   "ecoIndex": {
+      "description": "EcoIndex",
+      "message": "EcoIndex"
+   },
+   "exportButton": {
+      "description": "Export Button",
+      "message": "Export"
+   },
+   "grade": {
+      "description": "Grade",
+      "message": "Hinweis"
+   },
+   "greenhouseGasesEmission": {
+      "description": "Greenhouse Gases Emission (gCO2e)",
+      "message": "THG (gCO2e)"
+   },
+   "helpButton": {
+      "description": "Help button",
+      "message": "Hilfe"
+   },
+   "helpLink": {
+      "description": "Help link",
+      "message": "Hilfe"
+   },
+   "historyButton": {
+      "description": "History Button",
+      "message": "Historisch"
+   },
+   "historyPageTitle": {
+      "description": "History page title",
+      "message": "EcoIndex  - Analyseverlauf"
+   },
+   "launchAnalyseButton": {
+      "description": "Launch Analysis",
+      "message": "Starten Sie die Analyse"
+   },
+   "menuMoreInformation": {
+      "description": "Link for help in the menu frame",
+      "message": "Mehr Informationen ..."
+   },
+   "pageSize": {
+      "description": "Page Size(KB) .",
+      "message": "Seitengröße (KB)"
+   },
+   "pluginTitle": {
+      "description": "Plugin title",
+      "message": "EcoIndex Plugin "
+   },
+   "requestNumber": {
+      "description": "Number of request",
+      "message": "Anzahl der Anfragen"
+   },
+   "rule_AddExpiresOrCacheControlHeaders": {
+      "description": "Add expires or cache-Control headers",
+      "message": "Hinzufügen von abgelaufenen oder Cache-Steuerungs-Headern (> = 95%)"
+   },
+   "rule_AddExpiresOrCacheControlHeaders_Comment": {
+      "description": "Percentage of resources cached ",
+      "message": "$PERCENT$ versteckte Ressourcen",
+      "placeholders": {
+         "PERCENT": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_AddExpiresOrCacheControlHeaders_DetailComment": {
+      "description": "KB has no expires or cache-control header",
+      "message": "$resource$Ko hat keinen abgelaufenen oder Cache-Control-Header",
+      "placeholders": {
+         "resource": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_AddExpiresOrCacheControlHeaders_DetailDescription": {
+      "description": "Add expires or cache-Control headers",
+      "message": "Die Header Expires und Cache-Control legen fest, wie lange ein Browser eine Ressource im Cache behalten soll. Sie müssen sie daher für CSS-Stylesheets, JavaScript-Skripte und Bilder korrekt verwenden und konfigurieren. Im Idealfall sollten diese Elemente so lange wie möglich aufbewahrt werden, damit der Browser sie nicht mehr vom Server anfordert. Dies spart HTTP-Anforderungen, Bandbreite und Serverleistung."
+   },
+   "rule_CompressHttp": {
+      "description": "Compress ressources ",
+      "message": "Ressourcen komprimieren (> = 95%)\n"
+   },
+   "rule_CompressHttp_Comment": {
+      "description": "Percentage of resources compressed",
+      "message": "$PERCENT$ komprimierte Ressourcen\n",
+      "placeholders": {
+         "PERCENT": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_CompressHttp_DetailComment": {
+      "description": "is not compressed",
+      "message": "$RESOURCE$Ko wird nicht komprimiert",
+      "placeholders": {
+         "RESOURCE": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_CompressHttp_DetailDescription": {
+      "description": "Compress ressources ",
+      "message": "Sie können den Inhalt von HTML-Seiten komprimieren, um den Bandbreitenverbrauch zwischen Client und Server zu reduzieren. Alle modernen Browser (Smartphones, Tablets, Laptops und Desktops) akzeptieren das über gzip oder Deflate komprimierte HTML-Format. Am einfachsten ist es, den Webserver so zu konfigurieren, dass der HTML-Datenstrom im laufenden Betrieb oder automatisch beim Verlassen des Servers komprimiert wird. Diese Vorgehensweise (On-the-Fly-Komprimierung) ist nur für einen HTML-Datenstrom von Vorteil, da sie sich ständig weiterentwickelt. Wenn möglich, empfehlen wir, statische Ressourcen (z. B. CSS- und JavaScript-Bibliotheken) gleichzeitig manuell zu komprimieren.\n"
+   },
+   "rule_DomainsNumber": {
+      "description": "Limit the number of domains",
+      "message": "Begrenzen Sie die Anzahl der Domains (\u003C3)"
+   },
+   "rule_DomainsNumber_Comment": {
+      "description": "Number of domain(s) found",
+      "message": "$NB$ Domain (s) gefunden",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_DomainsNumber_DetailDescription": {
+      "description": "Limit Stylesheet files",
+      "message": "Wenn eine Website oder ein Onlinedienst die Komponenten einer Webseite in mehreren Domänen hostet, muss der Browser eine HTTP-Verbindung zu jeder dieser Domänen herstellen. Sobald die HTML-Seite abgerufen wurde, ruft der Browser die Quellen auf, wenn er das DOM (Document Object Model) durchläuft. Es gibt einige Ressourcen, die für die ordnungsgemäße Funktion der Seite unerlässlich sind. Wenn sie in einer anderen Domäne gehostet werden, die langsam ist, kann dies die Renderzeit der Seite verlängern. Daher sollten Sie nach Möglichkeit alle Ressourcen in einer einzigen Domäne konsolidieren. Die einzige Ausnahme von dieser Regel sind statische Ressourcen (Stylesheets, Bilder usw.), die in einer separaten Domäne gehostet werden müssen, um zu vermeiden, dass für jede HTTP-Anforderung vom GET-Browser ein oder mehrere Cookies gesendet werden. Dies reduziert die Antwortzeit und den unnötigen Bandbreitenverbrauch."
+   },
+   "rule_DontResizeImageInBrowser": {
+      "description": "Do not resize image in browser",
+      "message": "Ändern Sie die Größe von Bildern im Browser nicht"
+   },
+   "rule_DontResizeImageInBrowser_Comment": {
+      "description": "Number of image(s) resized in browser found",
+      "message": "$NB$ zugeschnittene Bilder im Browser",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_DontResizeImageInBrowser_DetailComment": {
+      "description": "Image(s) resized from natural size to client size browser found",
+      "message": "$IMAGE$ wird von geändert $NATURAL_SIZE$ beim $CLIENT_SIZE$",
+      "placeholders": {
+         "CLIENT_SIZE": {
+            "content": "$3"
+         },
+         "IMAGE": {
+            "content": "$1"
+         },
+         "NATURAL_SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_DontResizeImageInBrowser_DetailDescription": {
+      "description": "Do not resize image in browser ",
+      "message": "Ändern Sie die Größe von Bildern nicht mit HTML-Attributen für Höhe und Breite. Dadurch werden Bilder in ihrer ursprünglichen Größe gesendet, wodurch Bandbreite und Prozessorleistung verschwendet werden. Ein PNG-24-Bild mit 350 x 300 Pixel ist 41 KB groß. Wenn Sie die Größe derselben Bilddatei in HTML ändern und sie als 70 x 60 Pixel große Miniaturansicht anzeigen würden, wären es immer noch 41 KB, wenn sie eigentlich nicht größer als 3 KB sein sollte! Bedeutung 38 KB für nichts heruntergeladen. Die beste Lösung besteht darin, die Größe der Bilder mit einer Software wie Photoshop ohne HTML zu ändern. Wenn der von Benutzern der Website hinzugefügte Inhalt keinen bestimmten Mehrwert hat, sollten Sie am besten verhindern, dass sie Bilder mit einem WYSIWYG-Editor, z. B. CKEditor, einfügen."
+   },
+   "rule_EmptySrcTag": {
+      "description": "Avoid empty src tag",
+      "message": "Vermeiden Sie leere SRC-Tags"
+   },
+   "rule_EmptySrcTag_Comment": {
+      "description": "Number of  empty src tag(s) found ",
+      "message": "$NB$ leere SRC-Tags",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_EmptySrcTag_DefaultComment": {
+      "description": "No empty src tags found",
+      "message": "Kein leeres SRC-Tag"
+   },
+   "rule_EmptySrcTag_DetailDescription": {
+      "description": "Minified css",
+      "message": "Wenn ein Image-Tag mit einem leeren src-Attribut vorhanden ist, ruft der Browser das Verzeichnis auf, in dem sich die Seite befindet, und generiert unnötige und zusätzliche HTTP-Anforderungen."
+   },
+   "rule_ExternalizeCss": {
+      "description": "Externalize css",
+      "message": "CSS auslagern"
+   },
+   "rule_ExternalizeCss_Comment": {
+      "description": "Number of inline stylesheets found ",
+      "message": "$NB$ Inline-Stylesheet (s)",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_ExternalizeCss_DefaultComment": {
+      "description": "No inline stylesheet found",
+      "message": "Kein Inline-Stylesheet"
+   },
+   "rule_ExternalizeCss_DetailDescription": {
+      "description": "Externalize css",
+      "message": "Stellen Sie sicher, dass die CSS-Dateien vom HTML-Code für die Seite getrennt sind. Wenn Sie CSS in den Hauptteil der HTML-Datei aufnehmen und es für mehrere Seiten (oder sogar die gesamte Website) verwendet wird, sollte der Code für jede vom Benutzer angeforderte Seite gesendet werden, wodurch sich das gesendete Datenvolumen erhöht. Wenn sich das CSS jedoch in eigenen separaten Dateien befindet, kann der Browser vermeiden, erneut danach zu fragen, indem er es in seinem lokalen Cache speichert."
+   },
+   "rule_ExternalizeJs": {
+      "description": "Externalize js",
+      "message": "Js auslagern"
+   },
+   "rule_ExternalizeJs_Comment": {
+      "description": "Number of inline  javascripts found ",
+      "message": "$NB$ Inline-Javascript (s)",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_ExternalizeJs_DefaultComment": {
+      "description": "No inline JavaScript",
+      "message": "Kein JavaScript inline"
+   },
+   "rule_ExternalizeJs_DetailDescription": {
+      "description": "Externalize js",
+      "message": "Stellen Sie sicher, dass der JavaScript-Code vom HTML-Code auf der Seite getrennt ist, mit Ausnahme aller Konfigurationsvariablen für JavaScript-Objekte. Wenn Sie JavaScript-Code in den Text der HTML-Datei aufnehmen und dieser für mehrere Seiten (oder sogar die gesamte Website) verwendet wird, muss der Code für jede vom Benutzer angeforderte Seite gesendet werden, wodurch sich die Menge der gesendeten Daten erhöht. Wenn sich der JavaScript-Code jedoch in einer eigenen separaten Datei befindet, kann der Browser vermeiden, erneut nach ihnen zu fragen, indem er sie in seinem lokalen Cache speichert."
+   },
+   "rule_HttpError": {
+      "description": "Avoid HTTP errors",
+      "message": "Vermeiden Sie fehlerhafte Anfragen"
+   },
+   "rule_HttpError_Comment": {
+      "description": "Number of http errors",
+      "message": "$NB_HTTP_ERRORS$ erreur(s) HTTP",
+      "placeholders": {
+         "NB_HTTP_ERRORS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_HttpError_DetailDescription": {
+      "description": "Avoid HTTP errors",
+      "message": "Fehleranforderungen verbrauchen unnötig Ressourcen."
+   },
+   "rule_HttpRequests": {
+      "description": "Limit the number of HTTP requests",
+      "message": "Begrenzen Sie die Anzahl der HTTP-Anforderungen (\u003C27)"
+   },
+   "rule_HttpRequests_Comment": {
+      "description": "Number of HTTP request(s)",
+      "message": "$NB$ HTTP-Anfrage (n)",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_HttpRequests_DetailDescription": {
+      "description": "Limit the number of HTTP requests",
+      "message": "Die Zeit, die zum Herunterladen einer clientseitigen Seite benötigt wird, hängt direkt von der Anzahl und Größe der Dateien ab, die der Browser herunterladen muss. Für jede Datei sendet der Browser ein HTTP-GET an den Server. Es wartet auf die Antwort und lädt die Ressource herunter, sobald sie verfügbar ist. Je nach Art des verwendeten Webservers kann der Server umso weniger Seiten verarbeiten, je mehr Anforderungen pro Seite vorliegen. Die Reduzierung der Anzahl der Anforderungen pro Seite ist wichtig, um die Anzahl der zum Ausführen der Website erforderlichen HTTP-Server und damit die Auswirkungen auf die Umwelt zu reduzieren."
+   },
+   "rule_ImageDownloadedNotDisplayed": {
+      "description": "Do not download unecessary image",
+      "message": "Laden Sie keine Bilder unnötig hoch"
+   },
+   "rule_ImageDownloadedNotDisplayed_Comment": {
+      "description": "Number of image(s) downloaded but not displayed",
+      "message": "$NB$ Bild (e) heruntergeladen, aber nicht auf der Seite angezeigt ",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_ImageDownloadedNotDisplayed_DetailComment": {
+      "description": "Image(s) with size XxX is not display",
+      "message": "$IMAGE$ der Größe $SIZE$ wird nicht angezeigt",
+      "placeholders": {
+         "IMAGE": {
+            "content": "$1"
+         },
+         "SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_ImageDownloadedNotDisplayed_DetailDescription": {
+      "description": "Do not download image in browser until there are needed ",
+      "message": "Das Herunterladen von Bildern, die nicht unbedingt sichtbar sein müssen, verbraucht unnötig Ressourcen. Dies sind beispielsweise Bilder, die nur nach einer Benutzeraktion angezeigt werden"
+   },
+   "rule_JsValidate": {
+      "description": "Validate js",
+      "message": "Überprüfen Sie Javascript"
+   },
+   "rule_JsValidate_Comment": {
+      "description": "Number of  javascript error(s) found ",
+      "message": "$NB$ Javascript-Fehler",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_JsValidate_DefaultComment": {
+      "description": "Javascript validate",
+      "message": "Javascript validiert"
+   },
+   "rule_JsValidate_DetailDescription": {
+      "description": "Validate Js",
+      "message": "JSLint ist ein Tool zur Kontrolle der Codequalität, das überprüft, ob die verwendete JavaScript-Syntax von allen Browsern verstanden wird. Der erzeugte Code entspricht daher den Codierungsregeln, die es Dolmetschern ermöglichen, Code schnell und einfach auszuführen. Der Prozessor wird daher für eine kürzere Zeit verwendet."
+   },
+   "rule_MaxCookiesLength": {
+      "description": "Max cookies length(\u003C512B)",
+      "message": "Maximale Größe von Cookies pro Domain (\u003C512 Octets)"
+   },
+   "rule_MaxCookiesLength_Comment": {
+      "description": "Max cookie length value",
+      "message": "Maximale Größe = $Length$ Octets ",
+      "placeholders": {
+         "Length": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MaxCookiesLength_DefaultComment": {
+      "description": "No cookies",
+      "message": "Keine Kekse"
+   },
+   "rule_MaxCookiesLength_DetailComment": {
+      "description": "Cookie length x for domain y ",
+      "message": "Cookie-Länge $COOKIE_LENGTH$ für die Domain $DOMAIN$",
+      "placeholders": {
+         "COOKIE_LENGTH": {
+            "content": "$1"
+         },
+         "DOMAIN": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_MaxCookiesLength_DetailDescription": {
+      "description": "Max cookies length",
+      "message": "Die Länge des Cookies sollte reduziert werden, da es bei jeder Anforderung gesendet wird."
+   },
+   "rule_MinifiedCss": {
+      "description": "Minified css (>= 95%)",
+      "message": "CSS minimieren (> = 95%)"
+   },
+   "rule_MinifiedCss_Comment": {
+      "description": "Percentage of minified stylesheet ",
+      "message": "$NB$% minimiertes CSS",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MinifiedCss_DefaultComment": {
+      "description": "No css found",
+      "message": "Aucun css"
+   },
+   "rule_MinifiedCss_DetailComment": {
+      "description": "Css x should be minified",
+      "message": "$CSS$ sollte minimiert werden",
+      "placeholders": {
+         "CSS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MinifiedCss_DetailDescription": {
+      "description": "Minified css",
+      "message": "Verwenden Sie ein Tool wie YUI Compressor, um unnötige Leerzeichen und Zeilenumbrüche zu entfernen. Googles Apache mod_pagespeed kann dies ebenfalls automatisieren."
+   },
+   "rule_MinifiedJs": {
+      "description": "Minified js (>= 95%)",
+      "message": "Minimiere js (> = 95%)"
+   },
+   "rule_MinifiedJs_Comment": {
+      "description": "Percentage of minified javascript ",
+      "message": "$NB$% js minimiert",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MinifiedJs_DefaultComment": {
+      "description": "No js found",
+      "message": "Nein js"
+   },
+   "rule_MinifiedJs_DetailComment": {
+      "description": "Js x should be minified",
+      "message": "$JS$ sollte minimiert werden",
+      "placeholders": {
+         "JS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MinifiedJs_DetailDescription": {
+      "description": "Minified js",
+      "message": "Verwenden Sie ein Tool wie YUI Compressor, um unnötige Leerzeichen, Zeilenumbrüche, Semikolons zu entfernen und lokale Variablennamen zu verkürzen. Dies kann mithilfe des Apache-Moduls mod_pagespeed von Google automatisiert werden."
+   },
+   "rule_NoCookieForStaticRessources": {
+      "description": "No cookie for static ressources",
+      "message": "Kein Cookie für statische Ressourcen"
+   },
+   "rule_NoCookieForStaticRessources_Comment": {
+      "description": "Number of static ressources with cookie ",
+      "message": "$NB$ statische Ressource (n) mit einem Cookie (Insgesamt $TOTAL_SIZE$Ko)",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         },
+         "TOTAL_SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_NoCookieForStaticRessources_DefaultComment": {
+      "description": "No cookie",
+      "message": "Kein Keks"
+   },
+   "rule_NoCookieForStaticRessources_DetailComment": {
+      "description": "Resource x has cookie(s)",
+      "message": "$RESOURCE$ hat Cookies",
+      "placeholders": {
+         "RESOURCE": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_NoCookieForStaticRessources_DetailDescription": {
+      "description": "No cookie for static ressources",
+      "message": "Für statische Ressourcen ist ein Cookie nicht erforderlich, sodass unnötige Bandbreite verbraucht wird. Um dies zu vermeiden, können wir eine andere Domain für die statischen Ressourcen verwenden oder den Umfang der erstellten Cookies einschränken."
+   },
+   "rule_NoRedirect": {
+      "description": "Avoid redirect",
+      "message": "Vermeiden Sie Weiterleitungen"
+   },
+   "rule_NoRedirect_Comment": {
+      "description": "Number of redirect",
+      "message": "$NB_REDIRECT$ Weiterleitung (en)\n",
+      "placeholders": {
+         "NB_REDIRECT": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_NoRedirect_DetailDescription": {
+      "description": "Avoid redirect",
+      "message": "Weiterleitungen sollten nach Möglichkeit vermieden werden, da sie die Reaktion verlangsamen und unnötig Ressourcen verbrauchen."
+   },
+   "rule_OptimizeBitmapImages": {
+      "description": "Optimize bitmap images",
+      "message": "Bitmap-Bilder optimieren"
+   },
+   "rule_OptimizeBitmapImages_Comment": {
+      "description": "Number of images to optimize",
+      "message": "$NB_IMAGES$ Bild (e) zur Optimierung, geschätzter Mindestgewinn: $MIN_GAINS$ Ko",
+      "placeholders": {
+         "MIN_GAINS": {
+            "content": "$2"
+         },
+         "NB_IMAGES": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_OptimizeBitmapImages_DefaultComment": {
+      "description": "No bitmap image to optimize",
+      "message": "Keine zu optimierenden Bitmap-Bilder"
+   },
+   "rule_OptimizeBitmapImages_DetailComment": {
+      "description": "Image x size, possible to gain yKB",
+      "message": "$IMAGE$Ko $SIZE$, Gewinnmöglichkeit $GAIN$Ko",
+      "placeholders": {
+         "GAIN": {
+            "content": "$3"
+         },
+         "IMAGE": {
+            "content": "$1"
+         },
+         "SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_OptimizeBitmapImages_DetailDescription": {
+      "description": "Optimize bitmap images",
+      "message": "Bitmaps machen häufig den größten Teil der hochgeladenen Bytes aus, direkt vor CSS- und JavaScript-Bibliotheken. Ihre Optimierung hat daher einen erheblichen Einfluss auf die verbrauchte Bandbreite."
+   },
+   "rule_OptimizeSvg": {
+      "description": "Optimize svg images",
+      "message": "Bilder optimieren svg"
+   },
+   "rule_OptimizeSvg_Comment": {
+      "description": "Number of images to optimize",
+      "message": "$NB_IMAGES$ Bild (e) zu optimieren",
+      "placeholders": {
+         "NB_IMAGES": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_OptimizeSvg_DefaultComment": {
+      "description": "No svg to optimized",
+      "message": "Kein SVG zum Optimieren"
+   },
+   "rule_OptimizeSvg_DetailComment": {
+      "description": "Image should be oprimized (SIZE KB)",
+      "message": "$IMAGE$ könnte optimiert werden ($SIZE$Ko)",
+      "placeholders": {
+         "IMAGE": {
+            "content": "$1"
+         },
+         "SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_OptimizeSvg_DetailDescription": {
+      "description": "Optimize svg images",
+      "message": "Svg-Bilder sind leichter als Bitmap-Bilder, können jedoch mithilfe von Tools (z. B. svgo) optimiert und minimiert werden."
+   },
+   "rule_Plugins": {
+      "description": "Do not use plugins",
+      "message": "Verwenden Sie keine Plugins"
+   },
+   "rule_Plugins_Comment": {
+      "description": "Number of plugin found",
+      "message": "$NB_PLUGINS$ plugin",
+      "placeholders": {
+         "NB_PLUGINS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_Plugins_DefaultComment": {
+      "description": "No plugin found",
+      "message": "Kein Plugin"
+   },
+   "rule_Plugins_DetailDescription": {
+      "description": "Do not use plugins",
+      "message": "Vermeiden Sie die Verwendung von Plug-Ins (virtuelle Flash Player-, Java- und Silverlight-Maschinen usw.), da diese die Ressourcen (Prozessor und RAM) stark belasten können. Dies gilt insbesondere für Adobe Reader, sodass Apple beschlossen hat, die Technologie nicht auf seinen Mobilgeräten zu installieren, um die Akkulaufzeit zu maximieren. Bevorzugen Sie Standardtechnologien wie HTML5 und ECMAScript"
+   },
+   "rule_PrintStyleSheet": {
+      "description": "Provide print stylesheet",
+      "message": "Stellen Sie einen CSS-Druck bereit"
+   },
+   "rule_PrintStyleSheet_Comment": {
+      "description": "Number of print StyleSheet(s) found",
+      "message": "$NB_PRINTSTLESHEET$ CSS drucken",
+      "placeholders": {
+         "NB_PRINTSTLESHEET": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_PrintStyleSheet_DefaultComment": {
+      "description": "No print stylesheet found",
+      "message": "Kein Druck CSS"
+   },
+   "rule_PrintStyleSheet_DetailDescription": {
+      "description": "Provide print stylesheet",
+      "message": "Zusätzlich zu den Vorteilen für den Benutzer reduziert dieses Stylesheet die Anzahl der gedruckten Seiten und damit indirekt den ökologischen Fußabdruck der Website. Es sollte so einfach wie möglich sein und eine leichte Tinte verwenden, zum Beispiel Gothic Century. Ziehen Sie außerdem in Betracht, die Kopf-, Fuß-, Menü- und Seitenleiste auszublenden und alle Bilder außer den für den Inhalt erforderlichen zu entfernen. Dieses Druckstilblatt sorgt für einen saubereren Eindruck, indem es die Anzeige auf dem Bildschirm reduziert."
+   },
+   "rule_SocialNetworkButton": {
+      "description": "Do not use standarts social buttons",
+      "message": "Verwenden Sie keine Standard-Social-Media-Schaltflächen"
+   },
+   "rule_SocialNetworkButton_Comment": {
+      "description": "Number of standart social network button",
+      "message": "$NB_STANDARTBUTTON$ Standardknopf (e) gefunden",
+      "placeholders": {
+         "NB_STANDARTBUTTON": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_SocialNetworkButton_DefaultComment": {
+      "description": "No standart social network button found ",
+      "message": "Keine Standardschaltfläche für soziale Netzwerke gefunden"
+   },
+   "rule_SocialNetworkButton_DetailDescription": {
+      "description": "Do not use standarts social buttons",
+      "message": "Soziale Netzwerke wie Facebook, Twiter, Pinterest usw. Stellen Sie Plugins zur Verfügung, die auf einer WEB-Seite installiert werden können, um eine Freigabeschaltfläche und einen Likes-Zähler anzuzeigen. Diese Plugins verbrauchen unnötig Ressourcen. Es ist besser, direkte Links zu setzen"
+   },
+   "rule_SocialNetworkButton_detailComment": {
+      "description": "Import of social network script",
+      "message": "Ein Skript $SOCIAL_NETWORK$ Wurde gefunden",
+      "placeholders": {
+         "SOCIAL_NETWORK": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_StyleSheets": {
+      "description": "Limit Stylesheet files",
+      "message": "Begrenzen Sie die Anzahl der CSS-Dateien (\u003C3) "
+   },
+   "rule_StyleSheets_Comment": {
+      "description": "Number of stylesheets",
+      "message": "$NB_STYLESHEETS$ CSS-Dateien",
+      "placeholders": {
+         "NB_STYLESHEETS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_StyleSheets_DefaultComment": {
+      "description": "Not more that 2 stylesheets found",
+      "message": "Nicht mehr als 2 CSS-Dateien"
+   },
+   "rule_StyleSheets_DetailDescription": {
+      "description": "Limit Stylesheet files",
+      "message": "Reduzieren Sie die Anzahl der CSS-Dateien, um die Anzahl der HTTP-Anforderungen zu reduzieren. Wenn auf allen Seiten der Website mehrere Stylesheets verwendet werden, verketten Sie diese zu einer einzigen Datei. Einige CMS und Frameworks bieten Möglichkeiten, diese Optimierung automatisch durchzuführen."
+   },
+   "rule_UseETags": {
+      "description": "Use ETags (>= 95%)",
+      "message": "Verwenden Sie ETags (>= 95%)"
+   },
+   "rule_UseETags_Comment": {
+      "description": "Percentage of resources with ETags",
+      "message": "$PERCENT$ Ressourcen mit ETags",
+      "placeholders": {
+         "PERCENT": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_UseETags_DetailComment": {
+      "description": "Resource is not using ETags",
+      "message": "$RESOURCE$Ko verwendet keine ETags",
+      "placeholders": {
+         "RESOURCE": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_UseETags_DetailDescription": {
+      "description": "Use ETags",
+      "message": "Ein ETag ist eine Signatur, die einer Antwort vom Server zugeordnet ist. Wenn der Client eine URL (HTML-Seite, Bild, Stylesheet usw.) anfordert, deren ETag mit der bereits vorhandenen identisch ist, antwortet der Webserver, dass er die Ressource nicht herunterladen muss und diese verwenden sollte. er hat bereits. Die Verwendung von ETags spart viel Bandbreite."
+   },
+   "rule_UseStandardTypefaces": {
+      "description": "Use Standard Typefaces",
+      "message": "Verwenden Sie Standardschriftarten"
+   },
+   "rule_UseStandardTypefaces_Comment": {
+      "description": "Size of custom fonts found",
+      "message": "$SIZE$  KB bestimmter Zeichenschrift (en)",
+      "placeholders": {
+         "SIZE": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_UseStandardTypefaces_DefaultComment": {
+      "description": "No custom fonts found",
+      "message": "Keine spezifischen Charakterrichtlinien"
+   },
+   "rule_UseStandardTypefaces_DetailDescription": {
+      "description": "Use Standard Typefaces",
+      "message": "Utilisez des Polices Standards verdeutlicht die bestehenden Déjà sur l'ordinateur de l'utilisateur und nicht Donc Pas neben D'être Téléchargées. Cela économise de la bande passante und améliore le temps de rendu du site Web."
+   },
+   "saveAnalyseButton": {
+      "description": "Save Analyse Button",
+      "message": "Speichern Sie die Analyse"
+   },
+   "unsupportedRuleAnalyse": {
+      "description": "Analyse not supported by this browser",
+      "message": "-- Analyse wird von diesem Browser nicht unterstützt --"
+   },
+   "url": {
+      "description": "Url",
+      "message": "Url"
+   },
+   "waterConsumption": {
+      "description": "Water Consumption (cl)",
+      "message": "Wasser (cl)"
    }
+
 }

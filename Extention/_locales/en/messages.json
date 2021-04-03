@@ -110,5 +110,712 @@
    "topTraffic": {
       "description": "Top traffic list title",
       "message": "Top 5 traffic related to your browsing"
+   },
+   "activateBestPracticeAnalysisCheckbox": {
+      "description": "Title for activateBestPracticeAnalysisCheckbox",
+      "message": "Activate best practices analysis"
+   },
+   "bestPractices": {
+      "description": "Title for best practice",
+      "message": "Best practices"
+   },
+   "csvColumnsLabel": {
+      "description": "csvColumnsLabel",
+      "message": "Date;Url;Request number;Size(kb);Dom size;Greenhouse Gases Emission (gCO2e);Water consumption;ecoIndex;Grade"
+   },
+   "date": {
+      "description": "Date",
+      "message": "Date"
+   },
+   "deleteAllButton": {
+      "description": "Delete All Button",
+      "message": "Delete All"
+   },
+   "deleteAllConfirmMessage": {
+      "description": "Delete All Confirm Message",
+      "message": "Do you really want to delete all history ?"
+   },
+   "deleteButton": {
+      "description": "Delete Button",
+      "message": "Delete"
+   },
+   "domSize": {
+      "description": "Dom Size",
+      "message": "Dom Size"
+   },
+   "ecoIndex": {
+      "description": "EcoIndex",
+      "message": "EcoIndex"
+   },
+   "exportButton": {
+      "description": "Export Button",
+      "message": "Export"
+   },
+   "grade": {
+      "description": "Grade",
+      "message": "Grade"
+   },
+   "greenhouseGasesEmission": {
+      "description": "Greenhouse Gases Emission (gCO2e)",
+      "message": "Greenhouse Gases Emission (gCO2e)"
+   },
+   "helpButton": {
+      "description": "Help button",
+      "message": "Help"
+   },
+   "helpLink": {
+      "description": "Help link",
+      "message": "Help"
+   },
+   "historyButton": {
+      "description": "History Button",
+      "message": "History"
+   },
+   "historyPageTitle": {
+      "description": "History page title",
+      "message": "EcoIndex  - Analyse History"
+   },
+   "launchAnalyseButton": {
+      "description": "Launch Analysis",
+      "message": "Launch Analysis"
+   },
+   "menuMoreInformation": {
+      "description": "Link for help in the menu frame",
+      "message": "more information ..."
+   },
+   "menuText": {
+      "description": "Text when you click on the plugin's icone",
+      "message": "GreenIT Analysis is install in your browser and accessible via the devtool panel (F12) "
+   },
+   "pageSize": {
+      "description": "Page Size(KB) .",
+      "message": "Page Size (KB) "
+   },
+   "pluginTitle": {
+      "description": "Plugin title",
+      "message": "EcoIndex Plugin "
+   },
+   "requestNumber": {
+      "description": "Number of request",
+      "message": "Request number"
+   },
+   "rule_AddExpiresOrCacheControlHeaders": {
+      "description": "Add expires or cache-Control headers",
+      "message": "Add expires or cache-control headers (>= 95%)"
+   },
+   "rule_AddExpiresOrCacheControlHeaders_Comment": {
+      "description": "Percentage of resources cached ",
+      "message": "$PERCENT$ resources cached",
+      "placeholders": {
+         "PERCENT": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_AddExpiresOrCacheControlHeaders_DetailComment": {
+      "description": "KB has no Expires or Cache-Control header",
+      "message": "$resource$KB has no Expires or Cache-Control header",
+      "placeholders": {
+         "resource": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_AddExpiresOrCacheControlHeaders_DetailDescription": {
+      "description": "Add expires or cache-Control headers",
+      "message": "The Expires and Cache-Control headers determine how long a browser should keep a resource in its cache. You should therefore use them, and configure them correctly for CSS style sheets, JavaScript scripts and images. Ideally, these elements should be kept as long as possible so that the browser does not request them again from the server. This saves HTTP requests, bandwidth and CPU power server-side."
+   },
+   "rule_CompressHttp": {
+      "description": "Compress ressources ",
+      "message": "Compress ressources (>= 95%) "
+   },
+   "rule_CompressHttp_Comment": {
+      "description": "Percentage of resources compressed",
+      "message": "$PERCENT$ resources compressed",
+      "placeholders": {
+         "PERCENT": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_CompressHttp_DetailComment": {
+      "description": "is not compressed",
+      "message": "$RESOURCE$KB is not compressed",
+      "placeholders": {
+         "RESOURCE": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_CompressHttp_DetailDescription": {
+      "description": "Compress ressources ",
+      "message": "You can compress the content of HTML pages to minimize bandwidth consumption between the client and the server. All modern browsers (for smartphones, tablets, notebook and desktop computers) accept HTML compressed via gzip or Deflate. The easiest way to do so is to configure the web server so that it compresses the HTML data stream, either on-the-fly or automatically, as it leaves the server. This practice (on-the-fly compression) is only beneficial for a HTML data stream as it is constantly evolving. When possible, we recommend that you manually compress static resources (e.g. CSS and JavaScript libraries) all in one go."
+   },
+   "rule_DomainsNumber": {
+      "description": "Limit the number of domains",
+      "message": "Limit the number of domains (\u003C3)"
+   },
+   "rule_DomainsNumber_Comment": {
+      "description": "Number of domain(s) found",
+      "message": "$NB$ domain(s) found",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_DomainsNumber_DetailDescription": {
+      "description": "Limit Stylesheet files",
+      "message": "When a website or online service hosts a web page’s components across several domains, the browser has to establish an HTTP connection with every single one. Once the HTML page has been retrieved, the browser calls the sources as it traverses the DOM (Document Object Model). Some resources are essential for the page to work. If they are hosted on another domain which is slow, it may increase the page’s render time. You should therefore, when possible, group all resources on a single domain. The only exception to this is for static resources (style sheets, images, etc.), which should be hosted on a separate domain to avoid sending one or multiple cookies for each browser GET HTTP request. This reduces response time and unnecessary bandwidth consumption."
+   },
+   "rule_DontResizeImageInBrowser": {
+      "description": "Do not resize image in browser",
+      "message": "Don't resize image in browser"
+   },
+   "rule_DontResizeImageInBrowser_Comment": {
+      "description": "Number of image(s) resized in browser found",
+      "message": "$NB$ image(s) resized in browser found",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_DontResizeImageInBrowser_DetailComment": {
+      "description": "Image(s) resized from natural size to client size browser found",
+      "message": "$IMAGE$ is resized from $NATURAL_SIZE$ to $CLIENT_SIZE$",
+      "placeholders": {
+         "CLIENT_SIZE": {
+            "content": "$3"
+         },
+         "IMAGE": {
+            "content": "$1"
+         },
+         "NATURAL_SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_DontResizeImageInBrowser_DetailDescription": {
+      "description": "Do not resize image in browser ",
+      "message": "Do not resize images using HTML height and width attributes. Doing so sends images in their original size, wasting bandwidth and CPU power. A PNG-24 350 x 300 px image is 41 KB. If you resized the same image file using HTML, and displayed it as a 70 x 60 px thumbnail, it would still be 41 KB, when in reality it should be no more than 3 KB! Meaning 38 KB downloaded for nothing. The best solution is to resize images using software such as Photoshop, without using HTML. When content added by the website’s users has no specific added value, it is best to prevent them from being able to insert images using a WYSIWYG editor e.g. CKEditor."
+   },
+   "rule_EmptySrcTag": {
+      "description": "Avoid empty src tag",
+      "message": "Avoid empty src tag"
+   },
+   "rule_EmptySrcTag_Comment": {
+      "description": "Number of  empty src tag(s) found ",
+      "message": "$NB$ empty src tag(s) found",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_EmptySrcTag_DefaultComment": {
+      "description": "No empty src tags found",
+      "message": "No empty src tags found"
+   },
+   "rule_EmptySrcTag_DetailDescription": {
+      "description": "Minified css",
+      "message": "If there is an image tag with an empty src attribute, the browser will call the directory in which the page is located, generating unnecessary, additional HTTP requests."
+   },
+   "rule_ExternalizeCss": {
+      "description": "Externalize css",
+      "message": "Externalize css"
+   },
+   "rule_ExternalizeCss_Comment": {
+      "description": "Number of inline stylesheets found ",
+      "message": "$NB$ inline stylesheet(s) found ",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_ExternalizeCss_DefaultComment": {
+      "description": "No inline stylesheet found",
+      "message": "No inline stylesheet found"
+   },
+   "rule_ExternalizeCss_DetailDescription": {
+      "description": "Externalize css",
+      "message": "Ensure that CSS files are separate from the page’s HTML code. If you include CSS in the body of the HTML file, and it is used for several pages (or even the whole website), then the code must be sent for each page requested by the user, therefore increasing the volume of data sent. However, if the CSS are in their own separate files, the browser can avoid requesting them again by storing them in its local cache."
+   },
+   "rule_ExternalizeJs": {
+      "description": "Externalize js",
+      "message": "Externalize js"
+   },
+   "rule_ExternalizeJs_Comment": {
+      "description": "Number of inline  javascripts found ",
+      "message": "$NB$ inline  javascripts found",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_ExternalizeJs_DefaultComment": {
+      "description": "No inline JavaScript",
+      "message": "No inline JavaScript"
+   },
+   "rule_ExternalizeJs_DetailDescription": {
+      "description": "Externalize js",
+      "message": "Ensure that JavaScript code is separate from the page’s HTML code, with the exception of any configuration variables for JavaScript objects. If you include JavaScript code in the body of the HTML file, and it is used for several pages (or even the whole website), then the code must be sent for each page requested by the user, therefore increasing the volume of data sent. However, if the JavaScript code is in his own separate file, the browser can avoid requesting them again by storing them in its local cache."
+   },
+   "rule_HttpError": {
+      "description": "Avoid HTTP errors",
+      "message": "Avoid HTTP request errors"
+   },
+   "rule_HttpError_Comment": {
+      "description": "Number of http errors",
+      "message": "$NB_HTTP_ERRORS$ HTTP error(s)",
+      "placeholders": {
+         "NB_HTTP_ERRORS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_HttpError_DetailDescription": {
+      "description": "Avoid HTTP errors",
+      "message": "Requests with HTTP errors consume resources unnecessarily."
+   },
+   "rule_HttpRequests": {
+      "description": "Limit the number of HTTP requests",
+      "message": "Limit the number of HTTP requests (\u003C27)"
+   },
+   "rule_HttpRequests_Comment": {
+      "description": "Number of HTTP request(s)",
+      "message": "$NB$ HTTP request(s)",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_HttpRequests_DetailDescription": {
+      "description": "Limit the number of HTTP requests",
+      "message": "A page’s download time client-side directly correlates to the number and size of files the browser has to download. For each file, the browser sends a GET HTTP to the server. It waits for the response, and then downloads the resource as soon as it is available. Depending on the type of web server you use, the more requests per page there are, the fewer pages the server can handle. Reducing the number of requests per page is key to reducing the number of HTTP severs needed to run the website, and consequently its environmental impact"
+   },
+   "rule_ImageDownloadedNotDisplayed": {
+      "description": "Do not download unecessary image",
+      "message": "Do not download unecessary image"
+   },
+   "rule_ImageDownloadedNotDisplayed_Comment": {
+      "description": "Number of image(s) downloaded but not displayed",
+      "message": "$NB$ image(s) downloaded but not displayed",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_ImageDownloadedNotDisplayed_DetailComment": {
+      "description": "Image(s) with size XxX is not display",
+      "message": "$IMAGE$ with size $SIZE$ is not display",
+      "placeholders": {
+         "IMAGE": {
+            "content": "$1"
+         },
+         "SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_ImageDownloadedNotDisplayed_DetailDescription": {
+      "description": "Do not download image in browser until there are needed ",
+      "message": "Downloading images that will not necessarily be visible consumes resources unnecessarily. For example, images that are displayed only after a user action."
+   },
+   "rule_JsValidate": {
+      "description": "Validate js",
+      "message": "Validate js"
+   },
+   "rule_JsValidate_Comment": {
+      "description": "Number of  javascript error(s) found ",
+      "message": "$NB$ javascript error(s) found",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_JsValidate_DefaultComment": {
+      "description": "Javascript validate",
+      "message": "Javascript validate"
+   },
+   "rule_JsValidate_DetailDescription": {
+      "description": "Validate Js",
+      "message": "JSLint is a JavaScript code quality tool that checks that the JavaScript syntax used will be understood by all browsers. The code produced thus complies with coding rules which enables interpreters to quickly and easily run the code. The CPU is therefore utilized for a shorter time."
+   },
+   "rule_MaxCookiesLength": {
+      "description": "Max cookies length(\u003C512B)",
+      "message": "Max cookies length(\u003C512 Bytes )"
+   },
+   "rule_MaxCookiesLength_Comment": {
+      "description": "Max cookie length value",
+      "message": "Max cookies length = $Length$ Bytes ",
+      "placeholders": {
+         "Length": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MaxCookiesLength_DefaultComment": {
+      "description": "No cookies",
+      "message": "No cookies"
+   },
+   "rule_MaxCookiesLength_DetailComment": {
+      "description": "Cookie length x for domain y ",
+      "message": "Cookie length of $COOKIE_LENGTH$ for domain $DOMAIN$",
+      "placeholders": {
+         "COOKIE_LENGTH": {
+            "content": "$1"
+         },
+         "DOMAIN": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_MaxCookiesLength_DetailDescription": {
+      "description": "Max cookies length",
+      "message": "Cookie length should be small as it is send with each request"
+   },
+   "rule_MinifiedCss": {
+      "description": "Minified css (>= 95%)",
+      "message": "Minified css (>= 95%)"
+   },
+   "rule_MinifiedCss_Comment": {
+      "description": "Percentage of minified stylesheet ",
+      "message": "$NB$% minified stylesheet",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MinifiedCss_DefaultComment": {
+      "description": "No css found",
+      "message": "No css found"
+   },
+   "rule_MinifiedCss_DetailComment": {
+      "description": "Css x should be minified",
+      "message": "$CSS$ should be minified",
+      "placeholders": {
+         "CSS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MinifiedCss_DetailDescription": {
+      "description": "Minified css",
+      "message": "Use a tool like YUI Compressor to remove unnecessary spaces and line breaks. Google’s Apache mod_pagespeed can also automate this operation."
+   },
+   "rule_MinifiedJs": {
+      "description": "Minified js (>= 95%)",
+      "message": "Minified js (>= 95%)"
+   },
+   "rule_MinifiedJs_Comment": {
+      "description": "Percentage of minified javascript ",
+      "message": "$NB$% minified javascript",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MinifiedJs_DefaultComment": {
+      "description": "No js found",
+      "message": "No js found"
+   },
+   "rule_MinifiedJs_DetailComment": {
+      "description": "Js x should be minified",
+      "message": "$JS$ should be minified",
+      "placeholders": {
+         "JS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_MinifiedJs_DetailDescription": {
+      "description": "Minified js",
+      "message": "Use a tool such as YUI Compressor to remove unnecessary white spaces, line breaks, semi-colons and shorten local variable names. This operation can be automated using Google’s Apache mod_pagespeed module."
+   },
+   "rule_NoCookieForStaticRessources": {
+      "description": "No cookie for static ressources",
+      "message": "No cookie for static ressources"
+   },
+   "rule_NoCookieForStaticRessources_Comment": {
+      "description": "Number of static ressources with cookie ",
+      "message": "$NB$ static ressource(s) with cookie (Total of $TOTAL_SIZE$KB)",
+      "placeholders": {
+         "NB": {
+            "content": "$1"
+         },
+         "TOTAL_SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_NoCookieForStaticRessources_DefaultComment": {
+      "description": "No cookie",
+      "message": "No cookie"
+   },
+   "rule_NoCookieForStaticRessources_DetailComment": {
+      "description": "Resource x has cookie(s)",
+      "message": "$RESOURCE$ has cookie(s)",
+      "placeholders": {
+         "RESOURCE": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_NoCookieForStaticRessources_DetailDescription": {
+      "description": "No cookie for static ressources",
+      "message": "For static resources, a cookie is useless, so it consumes unnecessarily bandwidth.To avoid this, we can use a different domain for static resources or restrict the scope of cookies created"
+   },
+   "rule_NoRedirect": {
+      "description": "Avoid redirect",
+      "message": " Avoid redirect"
+   },
+   "rule_NoRedirect_Comment": {
+      "description": "Number of redirect",
+      "message": "$NB_REDIRECT$ redirect",
+      "placeholders": {
+         "NB_REDIRECT": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_NoRedirect_DetailDescription": {
+      "description": "Avoir redirect",
+      "message": "Redirections should be avoided as much as possible as they slow down response and drain resources unnecessarily."
+   },
+   "rule_OptimizeBitmapImages": {
+      "description": "Optimize bitmap images",
+      "message": "Optimize bitmap images"
+   },
+   "rule_OptimizeBitmapImages_Comment": {
+      "description": "Number of images to optimize",
+      "message": "$NB_IMAGES$ image(s)shoud probably be optimize, minimum gain estimated: $MIN_GAINS$ KB",
+      "placeholders": {
+         "MIN_GAINS": {
+            "content": "$2"
+         },
+         "NB_IMAGES": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_OptimizeBitmapImages_DefaultComment": {
+      "description": "No bitmap image to optimize",
+      "message": "No bitmap image to optimize"
+   },
+   "rule_OptimizeBitmapImages_DetailComment": {
+      "description": "Image x size, possible to gain yKB",
+      "message": "$IMAGE$KB $SIZE$, possible to gain $GAIN$KB",
+      "placeholders": {
+         "GAIN": {
+            "content": "$3"
+         },
+         "IMAGE": {
+            "content": "$1"
+         },
+         "SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_OptimizeBitmapImages_DetailDescription": {
+      "description": "Optimize bitmap images",
+      "message": "Bitmap images often constitute most of the bytes downloaded, just ahead of the CSS and JavaScript libraries. Optimizing them thus has a considerable impact on the bandwidth consumed."
+   },
+   "rule_OptimizeSvg": {
+      "description": "Optimize svg images",
+      "message": "Optimize svg images"
+   },
+   "rule_OptimizeSvg_Comment": {
+      "description": "Number of images to optimize",
+      "message": "$NB_IMAGES$ image(s) to optimize",
+      "placeholders": {
+         "NB_IMAGES": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_OptimizeSvg_DefaultComment": {
+      "description": "No svg to optimized",
+      "message": "No svg to optimize"
+   },
+   "rule_OptimizeSvg_DetailComment": {
+      "description": "Image should be oprimized (SIZE KB)",
+      "message": "$IMAGE$ should be optimized ($SIZE$KB)",
+      "placeholders": {
+         "IMAGE": {
+            "content": "$1"
+         },
+         "SIZE": {
+            "content": "$2"
+         }
+      }
+   },
+   "rule_OptimizeSvg_DetailDescription": {
+      "description": "Optimize svg images",
+      "message": "Svg images are less heavy than bitmap images, nevertheless they can be optimized and minified via tools (for example, svgo)"
+   },
+   "rule_Plugins": {
+      "description": "Do not use plugins",
+      "message": "Do not use plugins"
+   },
+   "rule_Plugins_Comment": {
+      "description": "Number of plugin found",
+      "message": "$NB_PLUGINS$ plugin(s) found",
+      "placeholders": {
+         "NB_PLUGINS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_Plugins_DefaultComment": {
+      "description": "No plugin found",
+      "message": "No plugin found"
+   },
+   "rule_Plugins_DetailDescription": {
+      "description": "Do not use plugins",
+      "message": "Avoid using plugins (Flash Player, Java and Silverlight virtual machines, etc.) because they can be a heavy drain on resources (CPU and RAM). This is especially true with Adobe’s Flash Player, to such an extent that Apple decided to not install the technology on its mobile devices to maximize battery life. Favor standard technology such as HTML5 and ECMAScript"
+   },
+   "rule_PrintStyleSheet": {
+      "description": "Provide print stylesheet",
+      "message": "Provide print stylesheet"
+   },
+   "rule_PrintStyleSheet_Comment": {
+      "description": "Number of print StyleSheet(s) found",
+      "message": "$NB_PRINTSTLESHEET$ print StyleSheet(s) found",
+      "placeholders": {
+         "NB_PRINTSTLESHEET": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_PrintStyleSheet_DefaultComment": {
+      "description": "No print stylesheet found",
+      "message": "No print stylesheet found"
+   },
+   "rule_PrintStyleSheet_DetailDescription": {
+      "description": "Provide print stylesheet",
+      "message": "In addition to the benefits for the user, this style sheet reduces the number of pages printed, and therefore indirectly minimizes the website’s ecological footprint. It should be as streamlined as possible and employ an ink-light typeface e.g. Century Gothic. Also consider hiding the header, footer, menu and sidebar, as well as deleting all images except those needed for content.This print style sheet makes for a cleaner print by trimming down what is displayed on the screen."
+   },
+   "rule_SocialNetworkButton": {
+      "description": "Do not use standarts social button",
+      "message": "Do not use standarts social button"
+   },
+   "rule_SocialNetworkButton_Comment": {
+      "description": "Number of standart social network button",
+      "message": "$NB_STANDARTBUTTON$ standart(s) social button(s) found",
+      "placeholders": {
+         "NB_STANDARTBUTTON": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_SocialNetworkButton_DefaultComment": {
+      "description": "No standart social network button found ",
+      "message": "No standart social network button found"
+   },
+   "rule_SocialNetworkButton_DetailDescription": {
+      "description": "Do not use standarts social button",
+      "message": "Social Network like Facebook , Twiter,Pinterest gives plugins to install on web page to get a share button and a like counter. These plugins consume unnecessary resources , it's better to put direct links"
+   },
+   "rule_SocialNetworkButton_detailComment": {
+      "description": "Import of social network script",
+      "message": "A script from $SOCIAL_NETWORK$ has been found",
+      "placeholders": {
+         "SOCIAL_NETWORK": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_StyleSheets": {
+      "description": "Limit Stylesheet files",
+      "message": "Limit Stylesheet files (\u003C3)"
+   },
+   "rule_StyleSheets_Comment": {
+      "description": "Number of stylesheets",
+      "message": "$NB_STYLESHEETS$ stylesheets found",
+      "placeholders": {
+         "NB_STYLESHEETS": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_StyleSheets_DefaultComment": {
+      "description": "Not more that 2 stylesheets found",
+      "message": "Not more that 2 stylesheets found"
+   },
+   "rule_StyleSheets_DetailDescription": {
+      "description": "Limit Stylesheet files",
+      "message": "Minimize the number of CSS files to reduce the number of HTTP requests. If several style sheets are used on all of the website’s pages, concatenate them into one single file. Some CMS and frameworks offer ways to do such optimization automatically"
+   },
+   "rule_UseETags": {
+      "description": "Use ETags (>= 95%)",
+      "message": "Use ETags (>= 95%)"
+   },
+   "rule_UseETags_Comment": {
+      "description": "Percentage of resources with ETags",
+      "message": "$PERCENT$ resources with ETags",
+      "placeholders": {
+         "PERCENT": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_UseETags_DetailComment": {
+      "description": "Resource is not using ETags",
+      "message": "$RESOURCE$KB is not using ETags",
+      "placeholders": {
+         "RESOURCE": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_UseETags_DetailDescription": {
+      "description": "Use ETags",
+      "message": "An ETag is a signature attached a server response. If the client requests a URL (HTML page, image, style sheet, etc.) whose ETag is identical to the one it already has, the web server will reply that it does not need to download the resource and that it should use the one it already possesses. Using ETags saves huge amounts of bandwidth."
+   },
+   "rule_UseStandardTypefaces": {
+      "description": "Use Standard Typefaces",
+      "message": "Use Standard Typefaces"
+   },
+   "rule_UseStandardTypefaces_Comment": {
+      "description": "Size of custom fonts found",
+      "message": "$SIZE$KB of custom fonts found",
+      "placeholders": {
+         "SIZE": {
+            "content": "$1"
+         }
+      }
+   },
+   "rule_UseStandardTypefaces_DefaultComment": {
+      "description": "No custom fonts found",
+      "message": "No custom fonts found"
+   },
+   "rule_UseStandardTypefaces_DetailDescription": {
+      "description": "Use Standard Typefaces",
+      "message": "Use standard typefaces as they already exist on the user’s computer, and therefore do not need to be downloaded. This saves bandwidth and improves the website’s render time."
+   },
+   "saveAnalyseButton": {
+      "description": "Save Analyse Button",
+      "message": "Save analysis"
+   },
+   "unsupportedRuleAnalyse": {
+      "description": "Analyse not supported by this browser",
+      "message": "-- Analyse not supported by this browser --"
+   },
+   "url": {
+      "description": "Url",
+      "message": "Url"
+   },
+   "waterConsumption": {
+      "description": "Water Consumption (cl)",
+      "message": "Water Consumption (cl)"
    }
 }
