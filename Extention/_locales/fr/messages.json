@@ -112,7 +112,6 @@
       "message": "Top 5 du trafic relatif à votre navigation"
    },
    "activateBestPracticeAnalysisCheckbox": {
-      "description": "Title for activateBestPracticeAnalysisCheckbox",
       "message": "Activer l'analyse des bonnes pratiques"
    },
    "bestPractices": {
@@ -182,10 +181,6 @@
    "menuMoreInformation": {
       "description": "Link for help in the menu frame",
       "message": "plus d'information ..."
-   },
-   "menuText": {
-      "description": "Text when you click on the plugin's icone",
-      "message": "GreenIT Analysis est installé et accessible via le panneau développeur (F12) "
    },
    "pageSize": {
       "description": "Page Size(KB) .",
