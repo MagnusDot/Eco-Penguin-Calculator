@@ -1,3 +1,12 @@
+var isChrome = !!window.chrome;
+let browserType = null;
+if (isChrome) {
+    browserType = chrome;
+} else {
+    browserType = browser;
+}
+
+
 const defaultLocation = 'regionOther';
 let userLocation = defaultLocation;
 
@@ -195,7 +204,7 @@ showStats = () => {
 }
 
 start = () => {
-    chrome.runtime.sendMessage({ action: 'start' });
+    browserType.runtime.sendMessage({ action: 'start' });
     localStorage.setItem('analysisStarted', '1');
     hide(startButton);
     show(stopButton);
@@ -203,7 +212,7 @@ start = () => {
 }
 
 stop = () => {
-    chrome.runtime.sendMessage({ action: 'stop' });
+    browserType.runtime.sendMessage({ action: 'stop' });
 
     hide(stopButton);
     show(startButton);
@@ -287,7 +296,7 @@ selectAnimalHandler = (event) => {
 
 
 translate = (translationKey) => {
-    return chrome.i18n.getMessage(translationKey);
+    return browserType.i18n.getMessage(translationKey);
 }
 
 translateText = (target, translationKey) => {
@@ -295,7 +304,7 @@ translateText = (target, translationKey) => {
 }
 
 translateHref = (target, translationKey) => {
-    target.href = chrome.i18n.getMessage(translationKey);
+    target.href = browserType.i18n.getMessage(translationKey);
 }
 
 const startButton = document.getElementById('startButton');

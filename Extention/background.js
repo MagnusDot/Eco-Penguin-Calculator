@@ -1,3 +1,12 @@
+var isChrome = !!window.chrome;
+let browserType = null;
+if (isChrome) {
+    browserType = chrome;
+} else {
+    browserType = browser;
+}
+
+
 extractHostname = (url) => {
     let hostname = url.indexOf("//") > -1 ? url.split('/')[2] : url.split('/')[0];
 
@@ -27,8 +36,8 @@ headersReceivedListener = (requestDetails) => {
     if (isChrome()) {
         const origin = extractHostname(!requestDetails.initiator ? requestDetails.url : requestDetails.initiator);
         const responseHeadersContentLength = requestDetails.responseHeaders.find(element => element.name.toLowerCase() === "content-length");
-        const contentLength = undefined === responseHeadersContentLength ? {value: 0}
-            : responseHeadersContentLength;
+        const contentLength = undefined === responseHeadersContentLength ? { value: 0 } :
+            responseHeadersContentLength;
         const requestSize = parseInt(contentLength.value, 10);
         setByteLengthPerOrigin(origin, requestSize);
 
@@ -52,7 +61,7 @@ headersReceivedListener = (requestDetails) => {
 };
 
 setBrowserIcon = (type) => {
-    chrome.browserAction.setIcon({path: `icons/pingoo-${type}.png`});
+    chrome.browserAction.setIcon({ path: `icons/pingoo-${type}.png` });
 };
 
 addOneMinute = () => {
@@ -67,10 +76,8 @@ handleMessage = (request) => {
     if ('start' === request.action) {
         setBrowserIcon('on');
 
-        chrome.webRequest.onHeadersReceived.addListener(
-            headersReceivedListener,
-            {urls: ['<all_urls>']},
-            ['responseHeaders']
+        browserType.webRequest.onHeadersReceived.addListener(
+            headersReceivedListener, { urls: ['<all_urls>'] }, ['responseHeaders']
         );
 
         if (!addOneMinuteInterval) {
@@ -82,7 +89,7 @@ handleMessage = (request) => {
 
     if ('stop' === request.action) {
         setBrowserIcon('off');
-        chrome.webRequest.onHeadersReceived.removeListener(headersReceivedListener);
+        browserType.webRequest.onHeadersReceived.removeListener(headersReceivedListener);
 
         if (addOneMinuteInterval) {
             clearInterval(addOneMinuteInterval);
@@ -91,7 +98,7 @@ handleMessage = (request) => {
     }
 };
 
-chrome.runtime.onMessage.addListener(handleMessage);
+browserType.runtime.onMessage.addListener(handleMessage);
 
 
 let connections = {};
@@ -99,37 +106,34 @@ let connections = {};
 
 
 /*
-* Listen for message form tab and send it to devtools
-**/
+ * Listen for message form tab and send it to devtools
+ **/
 const notify = (message, sender, sendResponse) => {
 
     if (sender.tab) {
         let tabId = sender.tab.id;
         if (tabId in connections) connections[tabId].postMessage(message);
         else console.warn("Tab not found in connection list.");
-    }
-    else console.warn("sender.tab not defined.");
+    } else console.warn("sender.tab not defined.");
 }
 
 
-chrome.runtime.onMessage.addListener(notify);
+browserType.runtime.onMessage.addListener(notify);
 
 console.log("start background process");
 
 // Listen to message from devTools
-chrome.runtime.onConnect.addListener((devToolsConnection) => {
+browserType.runtime.onConnect.addListener((devToolsConnection) => {
     console.log("received onConnect");
     // assign the listener function to a variable so we can remove it later
     let devToolsListener = (message, sender, sendResponse) => {
-        // Inject a content script into the identified tab
-        console.log("received script to execute form tabId " + message.tabId);
-        if (!connections[message.tabId]) connections[message.tabId] = devToolsConnection;
-        chrome.tabs.executeScript(message.tabId,
-            { code: "var analyseBestPractices=" + message.analyseBestPractices + ";", allFrames: true });
-        chrome.tabs.executeScript(message.tabId,
-            { file: message.scriptToInject, allFrames: true });
-    }
-    // add the listener
+            // Inject a content script into the identified tab
+            console.log("received script to execute form tabId " + message.tabId);
+            if (!connections[message.tabId]) connections[message.tabId] = devToolsConnection;
+            browserType.tabs.executeScript(message.tabId, { code: "var analyseBestPractices=" + message.analyseBestPractices + ";", allFrames: true });
+            browserType.tabs.executeScript(message.tabId, { file: message.scriptToInject, allFrames: true });
+        }
+        // add the listener
     devToolsConnection.onMessage.addListener(devToolsListener);
 
     devToolsConnection.onDisconnect.addListener((port) => {
