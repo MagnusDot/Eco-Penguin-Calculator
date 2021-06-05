@@ -17,7 +17,7 @@ const carbonIntensityFactorIngCO2PerKWh = {
     'regionOther': defaultCarbonIntensityFactorIngCO2PerKWh
 };
 
-let animalValue = {Penguin : 666, Greta: 777 };
+let animalValue = { Penguin: 666 };
 
 let statsInterval;
 
@@ -98,7 +98,7 @@ showStats = () => {
 
     const principalWebsite = [];
     const principalWebsiteStats = [];
-    stats.highestStats.forEach(data=>{
+    stats.highestStats.forEach(data => {
         principalWebsite.push(data.origin);
         principalWebsiteStats.push(data.percent)
     })
@@ -117,9 +117,9 @@ showStats = () => {
 
     const selectedAnimal = localStorage.getItem('selectedAnimal');
 
-    const pingoo = Math.round(gCO2Total/ animalValue[selectedAnimal]);
+    const pingoo = Math.round(gCO2Total / animalValue[selectedAnimal]);
 
-    console.log(pingoo, animalValue[selectedAnimal],selectedAnimal)
+    console.log(pingoo, animalValue[selectedAnimal], selectedAnimal)
 
     const kmByCar = Math.round(1000 * gCO2Total / GESgCO2ForOneKmByCar) / 1000;
     const chargedSmartphones = Math.round(gCO2Total / GESgCO2ForOneChargedSmartphone);
@@ -138,7 +138,7 @@ showStats = () => {
 
     document.getElementById('kWhTotalValue').textContent = kWhTotal.toString();
     document.getElementById('gCO2Value').textContent = gCO2Total.toString();
-   // document.getElementById('chargedSmartphonesValue').textContent = chargedSmartphones.toString();
+    // document.getElementById('chargedSmartphonesValue').textContent = chargedSmartphones.toString();
     document.getElementById('kmByCarValue').textContent = kmByCar.toString();
     console.log(principalWebsite)
     var myChart = new Chart(ctx, {
@@ -174,7 +174,7 @@ showStats = () => {
             scales: {
                 xAxes: [{
                     gridLines: {
-                        display:false
+                        display: false
                     },
                     ticks: {
                         display: false
@@ -182,7 +182,7 @@ showStats = () => {
                 }],
                 yAxes: [{
                     gridLines: {
-                        display:false
+                        display: false
                     },
                     ticks: {
                         display: false
@@ -252,7 +252,7 @@ init = () => {
         console.log("1")
 
         return;
-    }else{
+    } else {
         console.log("test")
     }
 
