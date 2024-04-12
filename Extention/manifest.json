@@ -1,20 +1,24 @@
 {
-    "name": "Penguin Data Calculator",
-    "description": "Calculate you're data consumption with fun Penguin",
-    "version": "1.1.1",
-    "background": {
-        "scripts": ["background.js"]
+  "name": "Penguin Data Calculator",
+  "description": "Calculate you're data consumption with fun Penguin",
+  "version": "1.1.2",
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "manifest_version": 3,
+  "default_locale": "en",
+  "options_page": "./Pages/options.html",
+  "devtools_page": "GreenIT-Analysis.html",
+  "permissions": [
+    "webRequest",
+    "<all_urls>"
+  ],
+  "action": {
+    "browser_style": true,
+    "default_icon": {
+      "48": "icons/pingoo-on.png"
     },
-    "browser_action": {
-        "browser_style": true,
-        "default_icon": {
-            "48": "icons/pingoo-on.png"
-        },
-        "default_popup": "Pages/popup.html"
-    },
-    "manifest_version": 2,
-    "default_locale": "en",
-    "options_page": "./Pages/options.html",
-    "devtools_page": "GreenIT-Analysis.html",
-    "permissions": ["storage", "webRequest", "\u003Call_urls>"]
+    "default_popup": "Pages/popup.html"
+  },
+  "content_security_policy": {}
 }
